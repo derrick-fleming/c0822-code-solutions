@@ -59,7 +59,7 @@ select {
   background-color: rgb(236 92 87);
   border-radius: 3rem;
   width: 150px;
-  margin-left: 500px;
+  float: right;
   padding: 0;
   line-height: 3.2rem;
 }
