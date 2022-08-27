@@ -1,0 +1,267 @@
+/* Header */
+body {
+  width: 1380px;
+  margin: 0 auto;
+}
+
+.header-container {
+  width: 100%;
+  border-width: 0 0 0.1rem;
+  border-color: rgb(236 237 240);
+  border-style: solid;
+  margin: 0.28rem 0;
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  padding: 1rem 5rem 1rem 6rem;
+}
+
+.header-column-half {
+  flex-basis: 45%;
+}
+
+.header-column-quarter {
+  flex-basis: 54%;
+}
+
+.header-column-inside {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar,
+.contact-us {
+  display: inline;
+  font-size: 1.04rem;
+  padding: 0.6rem 1.05rem;
+  margin: 0 0.8rem;
+  font-family: Avenir, sans-serif;
+  font-weight: 400;
+  color: rgb(160 160 160);
+}
+
+.contact-us {
+  background-color: rgb(41 67 99);
+  border-radius: 0.3rem;
+  border-width: 0;
+  color: white;
+  padding: 0.7rem 0.9rem;
+  margin: -0.2rem 0 0;
+}
+
+/* images banner */
+
+.image-container {
+  width: 100%;
+  padding: 4.4rem 6rem 2.5rem;
+}
+
+.image-row {
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position-y: center;
+  height: 580px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.image-heading-row {
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+}
+
+.transparent-overaly {
+  background: rgb(84 84 84 / 38%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.image-heading-overlay {
+  flex-basis: 100%;
+}
+
+.image-heading {
+  font-size: 2.55rem;
+  color: white;
+  margin: 0;
+}
+
+.image-paragraph {
+  color: white;
+  font-size: 1.06rem;
+  line-height: 1.8rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 0 3rem;
+}
+
+.image-heading-overlay > .button-container {
+  display: flex;
+  justify-content: flex-start;
+  margin: 2rem 0 0;
+}
+
+/* Clinicians List */
+
+h1 {
+  font-family: "Tiempos Headline", serif;
+  font-size: 2.05rem;
+  color: rgb(110 110 110);
+  font-weight: 100;
+}
+
+p {
+  font-family: Avenir, sans-serif;
+  color: rgb(124 124 124);
+  font-weight: 400;
+  font-size: 1.1rem;
+}
+
+.clinician-container {
+  margin-top: 2rem;
+  padding: 0 5rem 6rem;
+  background-color: rgb(250 250 250);
+  border-width: 0 0 0.1rem;
+  border-color: rgb(236 237 240);
+  border-style: solid;
+}
+
+.clinic-row {
+  margin: 0 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.clinic-column-full {
+  flex-basis: 100%;
+  margin: 1rem 0 2rem;
+  padding: 2rem;
+}
+
+.clinic-header {
+  text-align: center;
+}
+
+.clinic-paragraph {
+  text-align: center;
+  line-height: 1.8rem;
+  margin: -0.2rem 0 1rem;
+}
+
+.clinic-column-half {
+  flex-basis: 50%;
+}
+
+.clinic-mini-head {
+  font-family: Avenir, sans-serif;
+  font-size: 1.35rem;
+  text-align: center;
+  color: rgb(128 128 128);
+  font-weight: 400;
+  line-height: 3.8rem;
+}
+
+/* Learn More */
+
+.learn-container {
+  margin: 2rem 0 1.4rem 0.6rem;
+}
+
+.learn-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 5rem;
+}
+
+.column-three-quarter {
+  flex-basis: calc(300%/4);
+}
+
+.column-one-quarter {
+  flex-basis: calc(100%/4);
+}
+
+.button-style {
+  background-color: rgb(41 67 99);
+  font-family: Avenir, sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  padding: 1rem 3.5rem;
+  border-radius: 0.3rem;
+  border: 0 white solid;
+}
+
+/* About Information */
+.about-container {
+  background-color: rgb(82 83 81);
+  padding: 7.5rem 6rem;
+  margin: 0 auto;
+}
+
+.about-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-column-half {
+  flex-basis: calc(100%/2);
+}
+
+.canvas-logo {
+  width: 155px;
+}
+
+.address {
+  color: white;
+  line-height: 1.8rem;
+  margin-top: 3rem;
+}
+
+.about-column-fourth {
+  flex-basis: calc(100%/4);
+  padding: 0 1.6rem;
+}
+
+.about-links-heading {
+  color: white;
+  font-family: Avenir, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+/* Footer */
+.footer-container {
+  margin: 2rem 0 1.2rem 0.6rem;
+}
+
+h2:first-child {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.column-full {
+  flex-basis: 100%;
+  padding: 2rem 0;
+}
+
+.column-full > p {
+  display: inline;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding-right: 2.5rem;
+}
