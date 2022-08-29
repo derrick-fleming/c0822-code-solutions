@@ -1,6 +1,38 @@
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-three-quarter {
+  flex-basis: calc(300%/4);
+}
+
+.column-one-quarter {
+  flex-basis: calc(100%/4);
+}
+
+.column-forty-five {
+  flex-basis: 45%;
+}
+
+.column-fifty-five {
+  flex-basis: 55%;
+}
+
 .page-container {
   width: 1350px;
   margin: 0 auto;
+}
+
+.header-container > .row {
+  align-items: center;
 }
 
 .header-container {
@@ -8,20 +40,7 @@
   border-color: rgb(236 237 240);
   border-style: solid;
   margin: 0.28rem 0;
-}
-
-.header-row {
-  display: flex;
-  align-items: center;
   padding: 1rem 5rem 1rem 6rem;
-}
-
-.header-column-half {
-  flex-basis: 45%;
-}
-
-.header-column-quarter {
-  flex-basis: 54%;
 }
 
 .header-column-inside {
@@ -138,8 +157,7 @@ p {
   display: flex;
 }
 
-.clinic-column-full {
-  flex-basis: 100%;
+.clinic-full {
   margin: 1rem 0 2rem;
   padding: 2rem;
 }
@@ -155,10 +173,6 @@ p {
   margin: 0;
 }
 
-.clinic-column-half {
-  flex-basis: 50%;
-}
-
 .clinic-mini-head {
   font-family: Avenir, sans-serif;
   font-size: 1.35rem;
@@ -170,21 +184,14 @@ p {
 }
 
 .learn-container {
-  margin: 2rem 0 1.4rem 0.6rem;
+  margin: 2rem 0 1.4rem;
+  padding: 0 6rem;
 }
 
 .learn-row {
   display: flex;
   flex-wrap: wrap;
   margin: 0 5rem;
-}
-
-.column-three-quarter {
-  flex-basis: calc(300%/4);
-}
-
-.column-one-quarter {
-  flex-basis: calc(100%/4);
 }
 
 .button-style {
@@ -205,15 +212,6 @@ p {
   margin: 0 auto;
 }
 
-.about-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.about-column-half {
-  flex-basis: calc(100%/2);
-}
-
 .canvas-logo {
   width: 155px;
 }
@@ -222,11 +220,6 @@ p {
   color: white;
   line-height: 1.8rem;
   margin-top: 3rem;
-}
-
-.about-column-fourth {
-  flex-basis: calc(100%/4);
-  padding: 0 1.6rem;
 }
 
 .about-links-heading {
@@ -244,16 +237,14 @@ h2:first-child {
   margin-top: 0;
 }
 
-.column-full {
-  flex-basis: 100%;
-  padding: 2rem 0;
-}
-
 .column-full > p {
-  display: inline;
   font-size: 1.25rem;
   font-weight: 500;
   padding-right: 2.5rem;
+}
+
+.footer-info {
+  display: inline;
 }
 
 a {
