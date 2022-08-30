@@ -27,7 +27,7 @@
 }
 
 .page-container {
-  width: 1350px;
+  width: 1415px;
   margin: 0 auto;
 }
 
@@ -39,19 +39,19 @@
   border-width: 0 0 0.1rem;
   border-color: rgb(236 237 240);
   border-style: solid;
-  margin: 0.28rem 0;
-  padding: 1rem 5rem 1rem 6rem;
+  margin: 0.4rem 0;
+  padding: 1rem 6rem;
 }
 
-.header-column-inside {
+.header-inside {
   display: flex;
   justify-content: space-between;
 }
 
 .nav-bar,
 .contact-us {
-  font-size: 1.04rem;
-  padding: 0.6rem 1.05rem;
+  font-size: 1.1rem;
+  padding: 0.6rem 1.1rem;
   margin: 0 0.8rem;
   font-family: Avenir, sans-serif;
   font-weight: 400;
@@ -73,24 +73,25 @@
   border-width: 0;
   color: white;
   margin: -0.2rem 0 0;
+  padding: 0.8rem 1.2rem;
 }
 
 .image-container {
   padding: 4.4rem 6rem 2.5rem;
 }
 
-.image-row {
+.image-dimension {
   background-image: url("images/hero.jpg");
   background-size: cover;
   background-position-y: center;
-  height: 580px;
+  height: 600px;
   position: relative;
 }
 
-.image-heading-row {
+.image-heading-text {
   position: absolute;
-  top: 5rem;
-  left: 5rem;
+  top: 5.7rem;
+  left: 5.7rem;
 }
 
 .transparent-overaly {
@@ -102,33 +103,27 @@
   bottom: 0;
 }
 
-.image-heading-overlay {
-  flex-basis: 100%;
-}
-
 .image-heading {
-  font-size: 2.55rem;
+  font-size: 2.6rem;
   color: white;
   margin: 0;
 }
 
 .image-paragraph {
   color: white;
-  font-size: 1.06rem;
+  font-size: 1.1rem;
   line-height: 1.8rem;
 }
 
 .button-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 0 0 3rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
 }
 
-.image-heading-overlay > .button-container {
-  display: flex;
+.image-heading-text > .button-container {
+  margin-top: 2rem;
   justify-content: flex-start;
-  margin: 2rem 0 0;
 }
 
 h1 {
@@ -146,31 +141,24 @@ p {
 
 .clinician-container {
   margin-top: 2rem;
-  padding: 0 5rem 6.3rem;
+  padding: 0 5rem 7.4rem;
   background-color: rgb(250 250 250);
   border-width: 0 0 0.1rem;
   border-color: rgb(236 237 240);
   border-style: solid;
 }
 
-.clinic-row {
-  display: flex;
-}
-
-.clinic-full {
-  margin: 1rem 0 2rem;
-  padding: 2rem;
-}
-
 .clinic-header {
   text-align: center;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
+  padding-top: 3rem;
 }
 
 .clinic-paragraph {
   text-align: center;
   line-height: 1.8rem;
   margin: 0;
+  padding-bottom: 5rem;
 }
 
 .clinic-mini-head {
@@ -184,7 +172,7 @@ p {
 }
 
 .learn-container {
-  margin: 2rem 0 1.4rem;
+  margin: 2rem 0 1.8rem;
   padding: 0 6rem;
 }
 
@@ -208,7 +196,7 @@ p {
 
 .about-container {
   background-color: rgb(82 83 81);
-  padding: 7.5rem 6rem;
+  padding: 7.9rem 6rem 8.4rem;
   margin: 0 auto;
 }
 
@@ -230,21 +218,18 @@ p {
 }
 
 .footer-container {
-  margin: 2rem 0 1.2rem 0.6rem;
+  margin: 3.8rem 6rem;
 }
 
 h2:first-child {
   margin-top: 0;
 }
 
-.column-full > p {
-  font-size: 1.25rem;
-  font-weight: 500;
-  padding-right: 2.5rem;
-}
-
 .footer-info {
   display: inline;
+  padding-right: 2.2rem;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 a {
@@ -259,7 +244,7 @@ a:hover {
   padding: 8rem 6rem 2.5rem;
 }
 
-.product-image-row {
+.product-image {
   background-image: url("images/product/product-header.jpg");
   background-size: cover;
   background-position-y: center;
@@ -267,7 +252,7 @@ a:hover {
   position: relative;
 }
 
-.product-image-heading-row {
+.product-image-heading {
   position: absolute;
   top: 11rem;
   left: 5rem;
@@ -309,12 +294,6 @@ a:hover {
 
 .diagram-container {
   height: 100%;
-  display: flex;
-  align-items: center;
-}
-
-.command-column-half {
-  flex-basis: 50%;
   display: flex;
   align-items: center;
 }
