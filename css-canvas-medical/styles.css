@@ -1,0 +1,336 @@
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-three-quarter {
+  flex-basis: calc(300%/4);
+}
+
+.column-one-quarter {
+  flex-basis: calc(100%/4);
+}
+
+.column-forty-five {
+  flex-basis: 45%;
+}
+
+.column-fifty-five {
+  flex-basis: 55%;
+}
+
+.page-container {
+  width: 1415px;
+  margin: 0 auto;
+}
+
+.header-container > .row {
+  align-items: center;
+}
+
+.header-container {
+  border-width: 0 0 0.1rem;
+  border-color: rgb(236 237 240);
+  border-style: solid;
+  margin: 0.4rem 0;
+  padding: 1rem 6rem;
+}
+
+.header-inside {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar,
+.contact-us {
+  font-size: 1.1rem;
+  padding: 0.6rem 1.1rem;
+  margin: 0 0.8rem;
+  font-family: Avenir, sans-serif;
+  font-weight: 400;
+  color: rgb(160 160 160);
+}
+
+.nav-bar-product {
+  font-size: 1.04rem;
+  padding: 0.6rem 1.05rem;
+  margin: 0 0.8rem;
+  font-family: Avenir, sans-serif;
+  font-weight: 400;
+  color: rgb(41 67 99);
+}
+
+.contact-us {
+  background-color: rgb(41 67 99);
+  border-radius: 0.3rem;
+  border-width: 0;
+  color: white;
+  margin: -0.2rem 0 0;
+  padding: 0.8rem 1.2rem;
+}
+
+.image-container {
+  padding: 4.4rem 6rem 2.5rem;
+}
+
+.image-dimension {
+  background-image: url("images/hero.jpg");
+  background-size: cover;
+  background-position-y: center;
+  height: 600px;
+  position: relative;
+}
+
+.image-heading-text {
+  position: absolute;
+  top: 5.7rem;
+  left: 5.7rem;
+}
+
+.transparent-overaly {
+  background: rgb(84 84 84 / 38%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.image-heading {
+  font-size: 2.6rem;
+  color: white;
+  margin: 0;
+}
+
+.image-paragraph {
+  color: white;
+  font-size: 1.1rem;
+  line-height: 1.8rem;
+}
+
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.image-heading-text > .button-container {
+  margin-top: 2rem;
+  justify-content: flex-start;
+}
+
+h1 {
+  font-family: "Tiempos Headline", serif;
+  font-size: 2.05rem;
+  color: rgb(110 110 110);
+  font-weight: 100;
+}
+
+p {
+  font-family: Avenir, sans-serif;
+  color: rgb(124 124 124);
+  font-size: 1.1rem;
+}
+
+.clinician-container {
+  margin-top: 2rem;
+  padding: 0 5rem 7.4rem;
+  background-color: rgb(250 250 250);
+  border-width: 0 0 0.1rem;
+  border-color: rgb(236 237 240);
+  border-style: solid;
+}
+
+.clinic-header {
+  text-align: center;
+  margin-bottom: 1rem;
+  padding-top: 3rem;
+}
+
+.clinic-paragraph {
+  text-align: center;
+  line-height: 1.8rem;
+  margin: 0;
+  padding-bottom: 5rem;
+}
+
+.clinic-mini-head {
+  font-family: Avenir, sans-serif;
+  font-size: 1.35rem;
+  text-align: center;
+  color: rgb(114 114 114);
+  font-weight: 400;
+  line-height: 3.8rem;
+  margin: 0;
+}
+
+.learn-container {
+  margin: 2rem 0 1.8rem;
+  padding: 0 6rem;
+}
+
+.learn-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 5rem;
+}
+
+.button-style {
+  background-color: rgb(41 67 99);
+  font-family: Avenir, sans-serif;
+  font-size: 1.3rem;
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  padding: 1rem 3.5rem;
+  border-radius: 0.3rem;
+  border: 0 white solid;
+}
+
+.about-container {
+  background-color: rgb(82 83 81);
+  padding: 7.9rem 6rem 8.4rem;
+  margin: 0 auto;
+}
+
+.canvas-logo {
+  width: 155px;
+}
+
+.address {
+  color: white;
+  line-height: 1.8rem;
+  margin-top: 3rem;
+}
+
+.about-links-heading {
+  color: white;
+  font-family: Avenir, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 400;
+}
+
+.footer-container {
+  margin: 3.8rem 6rem;
+}
+
+h2:first-child {
+  margin-top: 0;
+}
+
+.footer-info {
+  display: inline;
+  padding-right: 2.2rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: rgb(95 154 226);
+}
+
+.product-image-container {
+  padding: 8rem 6rem 2.5rem;
+}
+
+.product-image {
+  background-image: url("images/product/product-header.jpg");
+  background-size: cover;
+  background-position-y: center;
+  height: 580px;
+  position: relative;
+}
+
+.product-image-heading {
+  position: absolute;
+  top: 11rem;
+  left: 5rem;
+}
+
+.product-transparent-overaly {
+  background: rgb(81 81 81 / 33%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.command-container {
+  margin-top: 2rem;
+  padding: 0 6rem 4rem;
+  background-color: rgb(250 250 250);
+}
+
+.automates-container {
+  border-width: 0 0 0.1rem;
+  border-color: rgb(236 237 240);
+  border-style: solid;
+  margin-top: 2rem;
+  padding: 0 6rem 4rem;
+  background-color: rgb(250 250 250);
+}
+
+.diagram-left {
+  padding: 5rem 3rem 0 0;
+  width: 100%;
+}
+
+.diagram-right {
+  padding: 4rem 3rem 3rem;
+  width: 100%;
+}
+
+.diagram-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.command-text-container {
+  padding: 6rem 0 0 5rem;
+  line-height: 1.9rem;
+}
+
+.command-head {
+  line-height: 2.5rem;
+}
+
+.command-paragraph {
+  line-height: 1.5rem;
+}
+
+.command-sub-head {
+  font-family: Avenir, sans-serif;
+  font-weight: 200;
+  color: rgb(24 67 98);
+}
+
+.command-paragraph-quote {
+  font-style: italic;
+  font-family: "Tiempos Headline", serif;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+}
+
+.population-text-container {
+  padding: 4rem 6rem;
+  line-height: 1.9rem;
+}
+
+.performance-text-container {
+  padding-top: 3rem;
+  padding-left: 5rem;
+  line-height: 1.9rem;
+}
