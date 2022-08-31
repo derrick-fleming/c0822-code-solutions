@@ -1,6 +1,5 @@
 /* exported getCharacterAtIndex */
 function getCharacterAtIndex(string, index) {
-  var stringArray = string.split('');
-  var characterAtIndex = stringArray[index];
+  var characterAtIndex = string[index];
   return characterAtIndex;
 }
