@@ -26,6 +26,7 @@ body {
 
 .images {
   width: 95%;
+  object-fit: cover;
 }
 
 h1 {
@@ -60,4 +61,8 @@ span {
   display: inline;
   text-decoration: line-through;
   margin-left: 0.2rem;
+}
+
+.lv-bag {
+  object-fit: cover;
 }
