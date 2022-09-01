@@ -11,7 +11,7 @@ value at the array index.;
 function oddOrEven(numbers) {
   var oddOrEvenOutcome = [];
   for (var i = 0; i < numbers.length; i++) {
-    if (numbers[i] % 2 === 0 && numbers[i] !== 1) {
+    if (numbers[i] % 2 === 0) {
       oddOrEvenOutcome.push('even');
     } else {
       oddOrEvenOutcome.push('odd');
