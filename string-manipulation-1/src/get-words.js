@@ -10,7 +10,6 @@ function getWords(string) {
   var getWordsOutput = [];
   if (string !== '') {
     getWordsOutput = string.split(' ');
-  } else {
     return getWordsOutput;
   }
   return getWordsOutput;
