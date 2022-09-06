@@ -13,11 +13,21 @@ function chunk(array, size) {
   var container = Math.floor(array.length / size);
   var firstArray = array.slice(0, size);
   var otherArrays = [];
-  chunkOutput.push(firstArray);
-  for (var x = 1; x <= container; x++) {
-    if (size * x < array.length) {
-      otherArrays = array.slice(size * x, 2 * (size * x));
+  if (container === 0) {
+    return array;
+  } else if (size === 1) {
+    chunkOutput.push(firstArray);
+    for (var i = 1; i < array.length; i++) {
+      otherArrays = array.slice(i, i + 1);
       chunkOutput.push(otherArrays);
+    }
+  } else if (size > 1) {
+    chunkOutput.push(firstArray);
+    for (var x = 1; x <= container; x++) {
+      if (size * x < array.length) {
+        otherArrays = array.slice(size * x, 2 * (size * x));
+        chunkOutput.push(otherArrays);
+      }
     }
   }
   return chunkOutput;
