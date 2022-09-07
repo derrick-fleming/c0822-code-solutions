@@ -10,25 +10,19 @@
 
 function chunk(array, size) {
   var chunkOutput = [];
-  var container = Math.floor(array.length / size);
-  var firstArray = array.slice(0, size);
-  var otherArrays = [];
-  if (container === 0) {
-    return array;
-  } else if (size === 1) {
-    chunkOutput.push(firstArray);
-    for (var i = 1; i < array.length; i++) {
-      otherArrays = array.slice(i, i + 1);
-      chunkOutput.push(otherArrays);
-    }
-  } else if (size > 1) {
-    chunkOutput.push(firstArray);
-    for (var x = 1; x <= container; x++) {
-      if (size * x < array.length) {
-        otherArrays = array.slice(size * x, 2 * (size * x));
-        chunkOutput.push(otherArrays);
+  var subArray = [];
+  var numberContainers = Math.floor(array.length / size);
+  if (numberContainers === 0) {
+    return chunkOutput;
+  } else {
+    for (var i = 0; i <= numberContainers; i++) {
+      if (size * i < array.length) {
+        subArray = array.slice(size * i, size * i + size);
+        chunkOutput.push(subArray);
+      } else {
+        break;
       }
     }
+    return chunkOutput;
   }
-  return chunkOutput;
 }
