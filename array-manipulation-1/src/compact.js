@@ -10,7 +10,7 @@
 function compact(array) {
   var compactOutput = [];
   for (var i = 0; i < array.length; i++) {
-    if (!!array[i] === true) {
+    if (array[i]) {
       compactOutput.push(array[i]);
     }
   }
