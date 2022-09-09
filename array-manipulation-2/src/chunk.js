@@ -2,26 +2,31 @@
 
 /* 1. define a function with two parameters: array & size
 . Create an empty array variable to store the final output.
-. Create an empty array variable that will store each sub array
-. Create a variable that will represent the # of containers in the output array
-. Group the size# of array values into the separate containers
-. Check if the size# of the array multiplied by "i" is smaller than the array's length.
-. Start by slicing index 0 and ending with the "size" array.
-. Assign this slice to the subArray array.
-. Push that value into the ChunkOutput array.
-. Repeat the steps
-. Return the chunkOutput once (size * i) is larger than the array's length.
+. Create a sizeContainer to modify the size of the "size" input
+. Create a loop that will continue until i = array.length
+. Inside that loop, adjust the sizeContainer to (size + i (will become size later on))
+. Create another loop that will continue until the variable (x) is equal to the size variable.
+. Check if the variable is smaller than the array's length. If it is not, break out of loop.
+. Push value (x) into the Subarray & cycle through until it is equal to the size variable
+. Push the subArray into the OutputArray
+. Repeat the steps until the entire array length has been passed.
+. Return the array Output at the end.
 */
 
 function chunk(array, size) {
-  var chunkOutput = [];
-  var subArray = [];
-  var numberContainers = Math.floor(array.length / size);
-  for (var i = 0; i <= numberContainers; i++) {
-    if (size * i < array.length) {
-      subArray = array.slice(size * i, size * i + size);
-      chunkOutput.push(subArray);
+  var outputArray = [];
+  var sizeContainer = size;
+  for (var i = 0; i < array.length; i += size) {
+    sizeContainer = size + i;
+    var subArray = [];
+    for (var x = i; x < sizeContainer; x++) {
+      if (x < array.length) {
+        subArray.push(array[x]);
+      } else {
+        break;
+      }
     }
+    outputArray.push(subArray);
   }
-  return chunkOutput;
+  return outputArray;
 }
