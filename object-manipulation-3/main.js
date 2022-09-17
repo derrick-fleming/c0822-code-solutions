@@ -164,4 +164,4 @@ function tieBreaker(tiePlayers, numberCards) {
 }
 
 cardGame(playerList, 2);
-cardGame(['Kevin', 'Sam', 'Kate', 'James', 'Ryan'], 2);
+cardGame(['Kevin', 'Sam', 'Kate', 'James'], 2);
