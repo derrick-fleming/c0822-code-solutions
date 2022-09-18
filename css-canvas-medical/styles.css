@@ -211,8 +211,8 @@ header {
 }
 
 .product-image-container {
-  padding: 4rem 0;
-  margin: 3rem auto;
+  padding: 4rem 0 3rem;
+  margin: 3rem auto 1rem;
 }
 
 .product-image {
@@ -238,9 +238,8 @@ header {
   bottom: 0;
 }
 
-.command-container {
-  margin-top: 2rem;
-  padding: 0 6rem 4rem;
+.command-container,
+.automates-container {
   background-color: rgb(250 250 250);
 }
 
@@ -248,18 +247,16 @@ header {
   border-width: 0 0 0.1rem;
   border-color: rgb(236 237 240);
   border-style: solid;
-  margin-top: 2rem;
-  padding: 0 6rem 4rem;
-  background-color: rgb(250 250 250);
 }
 
 .diagram-left {
   padding: 5rem 3rem 0 0;
   width: 100%;
+  margin-bottom: 4rem;
 }
 
 .diagram-right {
-  padding: 4rem 3rem 3rem;
+  padding: 5rem 3rem 0 0;
   width: 100%;
 }
 
@@ -270,38 +267,41 @@ header {
 }
 
 .command-text-container {
-  padding: 6rem 0 0 5rem;
+  padding: 8rem 0 0 5rem;
   line-height: 1.9rem;
 }
 
-.command-head {
+.head {
   line-height: 2.5rem;
 }
 
-.command-paragraph {
+.paragraph {
   line-height: 1.5rem;
 }
 
-.command-sub-head {
+.sub-head {
   font-family: Avenir, sans-serif;
   font-weight: 200;
   color: rgb(24 67 98);
 }
 
-.command-paragraph-quote {
-  font-style: italic;
+.paragraph-quote {
   font-family: "Tiempos Headline", serif;
-  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
 .population-text-container {
-  padding: 4rem 6rem;
+  padding: 4rem 0;
   line-height: 1.9rem;
+  margin-bottom: 2rem;
 }
 
 .performance-text-container {
   padding-top: 3rem;
   padding-left: 5rem;
   line-height: 1.9rem;
+  margin-bottom: 5rem;
 }
