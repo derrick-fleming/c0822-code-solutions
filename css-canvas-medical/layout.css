@@ -1,0 +1,32 @@
+.row {
+  display: flex;
+}
+
+.column-full {
+  flex-basis: 100%;
+}
+
+.column-half {
+  flex-basis: 50%;
+}
+
+.column-three-quarter {
+  flex-basis: calc(300%/4);
+}
+
+.column-one-quarter {
+  flex-basis: calc(100%/4);
+}
+
+.column-forty {
+  flex-basis: 44%;
+}
+
+.column-sixty {
+  flex-basis: 56%;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}

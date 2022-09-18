@@ -7,18 +7,19 @@
   <title>CSS Challenge - Canvas Medical</title>
   <link rel="stylesheet" href="fonts.css">
   <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="layout.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page-container">
-    <header class="header-container">
+  <header class="header">
+    <div class="container header-container">
       <div class="row">
-        <div class="column-forty-five">
+        <div class="column-forty">
           <a href="index.html">
             <img class="canvas-logo" src="images/logo-blue.svg">
           </a>
         </div>
-        <div class="column-fifty-five">
+        <div class="column-sixty">
           <div class="header-inside">
             <a class="nav-bar" href="product.html">Product</a>
             <h2 class="nav-bar">Implementation</h2>
@@ -28,7 +29,9 @@
           </div>
         </div>
       </div>
-    </header>
+    </div>
+  </header>
+  <div class="container">
     <div class="image-container">
       <div class="image-dimension">
         <div class="transparent-overaly"></div>
@@ -60,7 +63,9 @@
         </div>
       </div>
     </div>
-    <div class="clinician-container">
+  </div>
+  <div class="clinician-background">
+    <div class="container clinician-content">
       <div class="row">
         <div class="column-full">
           <h1 class="clinic-header">Clinicians Prefer Canvas</h1>
@@ -84,61 +89,65 @@
         </div>
       </div>
     </div>
-    <div class="learn-container">
-      <div class="row">
-        <div class="column-three-quarter">
-          <h1>Ready to learn more?</h1>
-          <p>
-            Schedule a private meeting now
-          </p>
+  </div>
+  <div class="container">
+    <div class="row learn-container">
+      <div class="column-three-quarter">
+        <h1>Ready to learn more?</h1>
+        <p>
+          Schedule a private meeting now
+        </p>
+      </div>
+      <div class="column-one-quarter">
+        <div class="button-container">
+          <button class="button-style">
+            Get Started
+          </button>
         </div>
-        <div class="column-one-quarter">
-          <div class="button-container">
-            <button class="button-style">
-              Get Started
-            </button>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <div class="about-background">
+      <div class="container about-content">
+        <div class="row">
+          <div class="column-half">
+            <img class="canvas-logo" src="images/logo-white.png" alt="Canvas Logo">
+            <p class="address">
+              2307 Irving Street, Suite 228
+              <br>
+              San Francisco CA 94122
+              <br>
+              (800) 370-1416
+              <br>
+              info@canvasmedical.com
+            </p>
+          </div>
+          <div class="column-one-quarter">
+            <h2 class="about-links-heading">COMPANY</h2>
+            <h2 class="about-links-heading">About Us</h2>
+            <h2 class="about-links-heading">Blog</h2>
+          </div>
+          <div class="column-one-quarter">
+            <h2 class="about-links-heading">PRODUCT</h2>
+            <a class="about-links-heading" href="product.html">
+              Product
+            </a>
+            <h2 class="about-links-heading">Implementation</h2>
+            <h2 class="about-links-heading">For Health Plans</h2>
+            <h2 class="about-links-heading">Security</h2>
           </div>
         </div>
       </div>
     </div>
-    <div class="about-container">
-      <div class="row">
-        <div class="column-half">
-          <img class="canvas-logo" src="images/logo-white.png" alt="Canvas Logo">
-          <p class="address">
-            2307 Irving Street, Suite 228
-            <br>
-            San Francisco CA 94122
-            <br>
-            (800) 370-1416
-            <br>
-            info@canvasmedical.com
-          </p>
-        </div>
-        <div class="column-one-quarter">
-          <h2 class="about-links-heading">COMPANY</h2>
-          <h2 class="about-links-heading">About Us</h2>
-          <h2 class="about-links-heading">Blog</h2>
-        </div>
-        <div class="column-one-quarter">
-          <h2 class="about-links-heading">PRODUCT</h2>
-          <a class="about-links-heading" href="product.html">
-            Product
-          </a>
-          <h2 class="about-links-heading">Implementation</h2>
-          <h2 class="about-links-heading">For Health Plans</h2>
-          <h2 class="about-links-heading">Security</h2>
-        </div>
-      </div>
-    </div>
-    <footer class="footer-container">
-      <div class="row">
+    <div class="container">
+      <div class="row footer-container">
         <div class="column-full">
           <p class="footer-info">Privacy &amp; Terms</p>
           <p class="footer-info">Contact Us</p>
         </div>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </body>
 </html>

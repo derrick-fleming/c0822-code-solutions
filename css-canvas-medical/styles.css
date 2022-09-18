@@ -1,46 +1,40 @@
-.row {
-  display: flex;
+a {
+  text-decoration: none;
 }
 
-.column-full {
-  flex-basis: 100%;
+a:hover {
+  color: rgb(95 154 226);
 }
 
-.column-half {
-  flex-basis: 50%;
+h1 {
+  font-family: "Tiempos Headline", serif;
+  font-size: 2.05rem;
+  color: rgb(110 110 110);
+  font-weight: 100;
 }
 
-.column-three-quarter {
-  flex-basis: calc(300%/4);
+p {
+  font-family: Avenir, sans-serif;
+  color: rgb(124 124 124);
+  font-size: 1.1rem;
 }
 
-.column-one-quarter {
-  flex-basis: calc(100%/4);
+h2:first-child {
+  margin-top: 0;
 }
 
-.column-forty-five {
-  flex-basis: 45%;
-}
-
-.column-fifty-five {
-  flex-basis: 55%;
-}
-
-.page-container {
-  width: 1415px;
-  margin: 0 auto;
+header {
+  border-width: 0 0 0.1rem;
+  border-color: rgb(236 237 240);
+  border-style: solid;
 }
 
 .header-container > .row {
   align-items: center;
 }
 
-.header-container {
-  border-width: 0 0 0.1rem;
-  border-color: rgb(236 237 240);
-  border-style: solid;
-  margin: 0.4rem 0;
-  padding: 1rem 6rem;
+.header {
+  padding: 1rem;
 }
 
 .header-inside {
@@ -58,12 +52,7 @@
   color: rgb(160 160 160);
 }
 
-.nav-bar-product {
-  font-size: 1.04rem;
-  padding: 0.6rem 1.05rem;
-  margin: 0 0.8rem;
-  font-family: Avenir, sans-serif;
-  font-weight: 400;
+.selected {
   color: rgb(41 67 99);
 }
 
@@ -77,13 +66,14 @@
 }
 
 .image-container {
-  padding: 4.4rem 6rem 2.5rem;
+  padding: 4.2rem 0 2.5rem;
 }
 
 .image-dimension {
   background-image: url("images/hero.jpg");
   background-size: cover;
   background-position-y: center;
+  width: 100%;
   height: 600px;
   position: relative;
 }
@@ -126,22 +116,12 @@
   justify-content: flex-start;
 }
 
-h1 {
-  font-family: "Tiempos Headline", serif;
-  font-size: 2.05rem;
-  color: rgb(110 110 110);
-  font-weight: 100;
-}
-
-p {
-  font-family: Avenir, sans-serif;
-  color: rgb(124 124 124);
-  font-size: 1.1rem;
-}
-
-.clinician-container {
+.clinician-content {
   margin-top: 2rem;
   padding: 0 5rem 7.4rem;
+}
+
+.clinician-background {
   background-color: rgb(250 250 250);
   border-width: 0 0 0.1rem;
   border-color: rgb(236 237 240);
@@ -173,7 +153,6 @@ p {
 
 .learn-container {
   margin: 2rem 0 1.8rem;
-  padding: 0 6rem;
 }
 
 .learn-row {
@@ -194,14 +173,17 @@ p {
   border: 0 white solid;
 }
 
-.about-container {
+.about-background {
   background-color: rgb(82 83 81);
-  padding: 7.9rem 6rem 8.4rem;
-  margin: 0 auto;
+}
+
+.about-content {
+  padding: 7.5rem 0 7rem;
 }
 
 .canvas-logo {
   width: 155px;
+  padding: 0.5rem;
 }
 
 .address {
@@ -218,11 +200,7 @@ p {
 }
 
 .footer-container {
-  margin: 3.8rem 6rem;
-}
-
-h2:first-child {
-  margin-top: 0;
+  margin: 3.8rem 0;
 }
 
 .footer-info {
@@ -230,14 +208,6 @@ h2:first-child {
   padding-right: 2.2rem;
   font-weight: 500;
   font-size: 1.2rem;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgb(95 154 226);
 }
 
 .product-image-container {
