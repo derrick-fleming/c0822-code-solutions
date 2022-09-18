@@ -211,7 +211,8 @@ header {
 }
 
 .product-image-container {
-  padding: 8rem 6rem 2.5rem;
+  padding: 4rem 0;
+  margin: 3rem auto;
 }
 
 .product-image {
