@@ -83,6 +83,24 @@ var cardDeck = [
 ];
 var shuffleDeck = _.shuffle(cardDeck);
 
+var suits = ['clubs', 'diamonds', 'hearts', 'spades'];
+var ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace'];
+var cards = {};
+
+for (var index = 0; index < suits.length; index++) {
+  for (var card = 0; card < ranks.length; card++) {
+    cards.suit = suits[index];
+    cards.rank = ranks[card];
+    if (index < 9) {
+      cards.points = 2 + index;
+    } else if (index > 9 && index < 12) {
+      cards.points = 10;
+    } else {
+      cards.points = 11;
+    }
+  }
+}
+
 function cardGame(playerList, numberCards) {
   var players = [];
   var tiePlayers = [];
