@@ -197,6 +197,7 @@ header {
   font-family: Avenir, sans-serif;
   font-size: 1.35rem;
   font-weight: 400;
+  display: block;
 }
 
 .footer-container {
@@ -215,22 +216,36 @@ header {
   margin: 3rem auto 1rem;
 }
 
-.product-image {
-  background-image: url("images/product/product-header.jpg");
+.product-image,
+.implementation-image {
   background-size: cover;
   background-position-y: center;
   height: 580px;
   position: relative;
 }
 
-.product-image-heading {
+.product-image {
+  background-image: url("images/product/product-header.jpg");
+}
+
+.implementation-image {
+  background-image: url("images/implementation/implementation-header.jpg");
+}
+
+.image-heading-container {
   position: absolute;
   top: 11rem;
   left: 5rem;
 }
 
-.product-transparent-overaly {
-  background: rgb(81 81 81 / 33%);
+.implementation-heading {
+  position: absolute;
+  top: 8rem;
+  left: 5rem;
+}
+
+.other-pages-transparent-overaly {
+  background: rgb(55 55 55 / 33%);
   position: absolute;
   top: 0;
   right: 0;
@@ -243,7 +258,8 @@ header {
   background-color: rgb(250 250 250);
 }
 
-.automates-container {
+.automates-container,
+.list-outline {
   border-width: 0 0 0.1rem;
   border-color: rgb(236 237 240);
   border-style: solid;
@@ -275,6 +291,11 @@ header {
   line-height: 2.5rem;
 }
 
+.center {
+  text-align: center;
+  font-size: 2.2rem;
+}
+
 .paragraph {
   line-height: 1.5rem;
 }
@@ -304,4 +325,32 @@ header {
   padding-left: 5rem;
   line-height: 1.9rem;
   margin-bottom: 5rem;
+}
+
+.list-container {
+  padding-left: 1.1rem;
+  padding-bottom: 5rem;
+  margin-bottom: 3rem;
+}
+
+.list {
+  line-height: 1.6rem;
+}
+
+.list-heading {
+  padding: 3.5rem;
+}
+
+.list-container > h1 {
+  margin-bottom: 0;
+  font-size: 2.5rem;
+}
+
+.list-container > p {
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+span.clinic-mini-head {
+  padding-left: 0.5rem;
 }
