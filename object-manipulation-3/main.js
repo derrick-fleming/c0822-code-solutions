@@ -27,79 +27,30 @@ console.log('Lodash is loaded:', typeof _ !== 'undefined');
 
 var playerList = ['Player 1', 'Player 2', 'Player 3', 'Player 4'];
 var winner = 0;
-var cardDeck = [
-  { rank: 'Ace', suit: 'clubs', points: 11 },
-  { rank: '2', suit: 'clubs', points: 2 },
-  { rank: '3', suit: 'clubs', points: 3 },
-  { rank: '4', suit: 'clubs', points: 4 },
-  { rank: '5', suit: 'clubs', points: 5 },
-  { rank: '6', suit: 'clubs', points: 6 },
-  { rank: '7', suit: 'clubs', points: 7 },
-  { rank: '8', suit: 'clubs', points: 8 },
-  { rank: '9', suit: 'clubs', points: 9 },
-  { rank: '10', suit: 'clubs', points: 10 },
-  { rank: 'Jack', suit: 'clubs', points: 10 },
-  { rank: 'Queen', suit: 'clubs', points: 10 },
-  { rank: 'King', suit: 'clubs', points: 10 },
-  { rank: 'Ace', suit: 'diamonds', points: 11 },
-  { rank: '2', suit: 'diamonds', points: 2 },
-  { rank: '3', suit: 'diamonds', points: 3 },
-  { rank: '4', suit: 'diamonds', points: 4 },
-  { rank: '5', suit: 'diamonds', points: 5 },
-  { rank: '6', suit: 'diamonds', points: 6 },
-  { rank: '7', suit: 'diamonds', points: 7 },
-  { rank: '8', suit: 'diamonds', points: 8 },
-  { rank: '9', suit: 'diamonds', points: 9 },
-  { rank: '10', suit: 'diamonds', points: 10 },
-  { rank: 'Jack', suit: 'diamonds', points: 10 },
-  { rank: 'Queen', suit: 'diamonds', points: 10 },
-  { rank: 'King', suit: 'diamonds', points: 10 },
-  { rank: 'Ace', suit: 'hearts', points: 11 },
-  { rank: '2', suit: 'hearts', points: 2 },
-  { rank: '3', suit: 'hearts', points: 3 },
-  { rank: '4', suit: 'hearts', points: 4 },
-  { rank: '5', suit: 'hearts', points: 5 },
-  { rank: '6', suit: 'hearts', points: 6 },
-  { rank: '7', suit: 'hearts', points: 7 },
-  { rank: '8', suit: 'hearts', points: 8 },
-  { rank: '9', suit: 'hearts', points: 9 },
-  { rank: '10', suit: 'hearts', points: 10 },
-  { rank: 'Jack', suit: 'hearts', points: 10 },
-  { rank: 'Queen', suit: 'hearts', points: 10 },
-  { rank: 'King', suit: 'hearts', points: 10 },
-  { rank: 'Ace', suit: 'spades', points: 11 },
-  { rank: '2', suit: 'spades', points: 2 },
-  { rank: '3', suit: 'spades', points: 3 },
-  { rank: '4', suit: 'spades', points: 4 },
-  { rank: '5', suit: 'spades', points: 5 },
-  { rank: '6', suit: 'spades', points: 6 },
-  { rank: '7', suit: 'spades', points: 7 },
-  { rank: '8', suit: 'spades', points: 8 },
-  { rank: '9', suit: 'spades', points: 9 },
-  { rank: '10', suit: 'spades', points: 10 },
-  { rank: 'Jack', suit: 'spades', points: 10 },
-  { rank: 'Queen', suit: 'spades', points: 10 },
-  { rank: 'King', suit: 'spades', points: 10 }
-];
-var shuffleDeck = _.shuffle(cardDeck);
-
 var suits = ['clubs', 'diamonds', 'hearts', 'spades'];
 var ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King', 'Ace'];
-var cards = {};
+var cardDeck = [];
 
-for (var index = 0; index < suits.length; index++) {
-  for (var card = 0; card < ranks.length; card++) {
-    cards.suit = suits[index];
-    cards.rank = ranks[card];
-    if (index < 9) {
-      cards.points = 2 + index;
-    } else if (index > 9 && index < 12) {
-      cards.points = 10;
-    } else {
-      cards.points = 11;
+function createCards() {
+  for (var index = 0; index < suits.length; index++) {
+    for (var card = 0; card < ranks.length; card++) {
+      var cards = {};
+      cards.suit = suits[index];
+      cards.rank = ranks[card];
+      if (card < 9) {
+        cards.points = 2 + card;
+      } else if (card >= 9 && card < 12) {
+        cards.points = 10;
+      } else {
+        cards.points = 11;
+      }
+      cardDeck.push(cards);
     }
   }
 }
+
+createCards();
+var shuffleDeck = _.shuffle(cardDeck);
 
 function cardGame(playerList, numberCards) {
   var players = [];
