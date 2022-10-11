@@ -1,0 +1,501 @@
+   69  git status
+   70  git commit -m "Changed to boolean instead of using a counter to keep track of whether the light is currently on." 
+   71  git push origin javascript-light-bulb
+   72  git switch main
+   73  git pull origin main
+   74  git branch dom-creation
+   75  git switch dom-creation
+   76  git status
+   77  git add dom-creation
+   78  git commit -m "Completed dom-creation exercise." 
+   79  git push origin dom-creation
+   80  git switch main
+   81  git switch array-manipulation-1
+   82  git status
+   83  git add array-manipulation-1
+   84  git status
+   85  git commit -m "Changed condition in compact function  to just if(array[i])" 
+   86  git push origin array-manipulation-1
+   87  git switch main
+   88  git switch array-manipulation-2
+   89  git switch main
+   90  git pull origin main
+   91  git pull origin main
+   92  git branch css-media-queries
+   93  git switch css-media-queries
+   94  git status
+   95  git add css-media-queries
+   96  git status
+   97  git commit -m "Completed css-media-queries exercise." 
+   98  git push origin css-media-queries
+   99  git switch main
+  100  git pull origin main
+  101  git switch array-manipulation-2
+  102  git switch main
+  103  git branch javascript-modal
+  104  git switch javascript-modal
+  105  git status
+  106  git add javascript-modal
+  107  git status
+  108  git commit -m "Completed javascript-modal exercise." 
+  109  git push origin javascript-modal
+  110  git switch main
+  111  git switch array-manipulation-2
+  112  git status
+  113  git add array-manipulation-2
+  114  git status
+  115  git add array-manipulation-2
+  116  git status
+  117  git commit -m "Revised chunk function of array-manipulation-2." 
+  118  git push origin array-manipulation-2
+  119  git switch main
+  120  git branch dom-event-delegation
+  121  git branch --list
+  122  git switch dom-event-delegation
+  123  git status
+  124  git add dom-event-delegation
+  125  git status
+  126  git commit -m "Completed dom-event-delegation exercise."
+  127  git push origin dom-event-delegation
+  128  git switch main
+  129  git pull origin main
+  130  git branch javascript-view-swapping
+  131  git switch javascript-view-swapping
+  132  git status
+  133  git add javascript-view-swapping
+  134  git status
+  135  git commit -m "Completed javascript-view-swapping exercise." 
+  136  git push origin javascript-view-swapping
+  137  git switch main
+  138  git pull origin main
+  139  git branch css-responsive-layout
+  140  git switch css-responsive-layout
+  141  git status
+  142  git add css-responsive-layout
+  143  git status
+  144  git commit -m "Completed css-responsive-layout exercise." 
+  145  git push origin css-responsive-layout
+  146  git switch main
+  147  git pull origin main 
+  148  git branch javascript-typing-tutor
+  149  git switch javascript-typing-tutor
+  150  git status
+  151  git restore javascript-modal/index.html
+  152  git status
+  153  git status
+  154  git restore javascript-modal/styles.css
+  155  git status
+  156  git status
+  157  git add javascript-typing-tutor
+  158  git commit -m "Completed javascript-typing-tutor exercise." 
+  159  git push origin javascript-typing-tutor
+  160  git switch main
+  161  git switch array-manipulation-2
+  162  git status
+  163  git switch main
+  164  git switch array-manipulation-2
+  165  git status
+  166  git add array-manipulation-2
+  167  git commit -m "Made first loop in chunk function  incremenet by += size to make it loop effectively."
+  168  git push origin array-manipulation-2
+  169  git switch main
+  170  git branch javascript-and-json
+  171  git switch javascript-and-json
+  172  git status
+  173  git add javascript-and-json
+  174  git status
+  175  git commit -m "Completed javascript-and-json exercise." 
+  176  git push origin javascript-and-json
+  177  git switch main
+  178  git pull origin main
+  179  git branch javascript-local-storage
+  180  git switch javascript-local-storage
+  181  git add javascript-local-storage
+  182  git status
+  183  git commit -m "Completed javascript-local-storage exercise." 
+  184  git push origin javascript-local-storage
+  185  git switch main
+  186  git pull origin main
+  187  git branch object-manipulation-2
+  188  git switch object-manipulation-2
+  189  git status
+  190  git add object-manipulation-2
+  191  git status
+  192  git commit -m "Completed object-manipulation-2 exercise." 
+  193  git push origin status
+  194  git status 
+  195  git add object-manipulation-2
+  196  git status
+  197  git commit -m "Saved pick function." 
+  198  git push origin object-manipulation-2
+  199  git status
+  200  git switch main
+  201  git pull origin main
+  202  git branch string-manipulation-3
+  203  git switch string-manipulation-3
+  204  git status
+  205  git add string-manipulation-3
+  206  git status
+  207  git commit -m "Completed string-manipulation-3 exercise." 
+  208  git push origin string-manipulation-3
+  209  git status
+  210  git switch main 
+  211  git branch array-manipulation-3 
+  212  git switch array-manipulation-3
+  213  git status
+  214  git add array-manipulation-3
+  215  git status
+  216  git commit -m "Completed array-manipulation-3 exercise." 
+  217  git push origin array-manipulation-3
+  218  git switch main
+  219  git branch object-manipulation-3
+  220  git switch object-manipulation-3
+  221  git status
+  222  git add object-manipulation-3
+  223  git commit -m "Completed first draft of card game in object-manipulation-3." 
+  224  git push orign object-manipulation-3
+  225  git push origin object-manipulation-3
+  226  git switch main
+  227  git switch objects-manipulation-3
+  228  git pull origin main
+  229  git switch object-manipulation-3
+  230  git status
+  231  git add object-manipulation-3/main.js
+  232  git status
+  233  git commit -m "Added ability to run a tie-breaker in case players received the same top score." 
+  234  git push origin object-manipulation-3
+  235  git switch main
+  236  git switch object-manipulation-3
+  237  git status
+  238  git add object-manipulation-3/main.js
+  239  git status
+  240  git commit -m "Adjusted one of the function calls." 
+  241  git push origin object-manipulation-3
+  242  git status
+  243  git add object-manipulation-3/main.js
+  244  git commit -m "Made few more minor adjusments." 
+  245  git push origin object-manipulation-3
+  246  git switch main
+  247  git pull origin main
+  248  git switch css-canvas-medical
+  249  git commit -, "
+  250  git status
+  251  git commit -m "
+  252  git status
+  253  git add css-canvas-medical/index.html
+  254  git add css-canvas-medical/product.html
+  255  git add css-canvas-medical/styles.css
+  256  git add css-canvas-medical/layout.css
+  257  git status
+  258  git commit - "Cleaned up styling and organization on home page." 
+  259  git commit -m "Cleaned up styling and organization on home page." 
+  260  git push origin css-canvas-medical
+  261  git status
+  262  git add css-canvas-medical/product.html
+  263  git add css-canvas-medical/styles.css
+  264  git status
+  265  git commit -m "Updated navigation bar and restyled the picture. Working on the column layouts." 
+  266  git push origin css-canvas-medical
+  267  git status
+  268  git add css-canvas-medical/product.html
+  269  git add css-canvas-medical/styles.css
+  270  git status
+  271  git commit -m "Edited styling of the product page to align better with the home page." 
+  272  git push origin css-canvas-medical
+  273  git status
+  274  git add css-canvas-medical/product.html
+  275  git add css-canvas-medical/styles.css
+  276  git add css-canvas-medical/implementation.html
+  277  git status
+  278  git add css=canvas-medical/index.html
+  279  git add css-canvas-medical/index.html
+  280  git add css-canvas-medical/layout.css
+  281  git status
+  282  git commit -m "Began working on draft of implementation page. Added links to other pages." 
+  283  git push origin css-canvas-medical
+  284  git switch main
+  285  git pull origin main
+  286  git branch --javascript-custom-methods
+  287  git branch javascript-custom-methods
+  288  git switch javascript-custom-methods
+  289  git status
+  290  git add javascript-custom-methods
+  291  git status
+  292  git commit -m "Completed javascript-custom-methods exercise." 
+  293  git status
+  294  git push origin javascript-custom-methods
+  295  git switch main
+  296  git pull origin main 
+  297  git pull origin main
+  298  git branch javascript-this
+  299  git switch javascript-this
+  300  git status
+  301  git add javascript-this
+  302  git status
+  303  git commit -m "Completed javascript-this exercise." 
+  304  git push origin javascript-this
+  305  git switch main
+  306  git pull origin main
+  307  git branch javascript-prototypes
+  308  git switch javascript-prototypes
+  309  git status
+  310  git add javascript-prototypes
+  311  git status
+  312  git commit -m "Completed javascript-protoypes exercise." 
+  313  git push origin javascript-protoypes
+  314  git push origin javascript-prototypes
+  315  git status
+  316  git switch main
+  317  git pull origin main
+  318  git switch object-manipulation-3
+  319  git status
+  320  git add object-manipulation-3/main.js
+  321  git status
+  322  git commit -m "Working on modifying card deck to loop through arrays to generate deck." 
+  323  git push origin object-manipulation-3
+  324  git switch main
+  325  git pull origin main
+  326  git branch javascript-constructors
+  327  git branch --list
+  328  git switch javascript-constructors
+  329  git status
+  330  git add javascript-constructors
+  331  git status
+  332  git commit -m "Completed javascript-constructors exercise." 
+  333  git push origin javascript-constructors
+  334  git switch main
+  335  git push origin main
+  336  git pull origin main
+  337  git status
+  338  git branch javascript-bank
+  339  git switch javascript-bank
+  340  git status
+  341  git add javascript-bank
+  342  git status
+  343  git commit -m "Completed javascript-bank exercise." 
+  344  git push origin javascript-bank
+  345  git switch main
+  346  git pull origin main
+  347  git branch javascript-timers
+  348  git switch javascript-timers
+  349  git status
+  350  git add javascript-timers
+  351  git status
+  352  git commit -m "Completed javascript-timers exercise." 
+  353  git push origin javascript-timers
+  354  git switch main
+  355  git pull origin main
+  356  git pull origin main
+  357  git branch javascript-carousel
+  358  git switch javascript-carousel
+  359  git status
+  360  git add javascript-carousel
+  361  git commit -m "Completed javascript-carousel exercise." 
+  362  git push origin javascript-carousel
+  363  git switch main
+  364  git switch object-manipulation-3
+  365  git status
+  366  git add object-manipulation-3
+  367  git status
+  368  git commit -m "Created an array of suits and ranks and looped over them to generate the cardDeck. 
+  369  "
+  370  git push origin object-manipulation-3
+  371  git switch main
+  372  git pull origin main
+  373  git branch practice-interview-problem
+  374  git switch practice-interview-problem
+  375  git status
+  376  git switch main
+  377  git pull origin main
+  378  git branch http-messages
+  379  git switch http-messages
+  380  $http GET https://example.com
+  381  http http:/example.com
+  382  http GET http:/example.com
+  383  http http://www.example.com
+  384  http -- verbose http://www.example.com
+  385  http --body GET https://jsonplaceholder.typicode.com/users > http-messages/users.json
+  386  http --body GET https://example.com > http-messages/index.html
+  387  git status
+  388  git add http-messages
+  389  git status
+  390  git commit -m "Completed http-messages exercise." 
+  391  git push origin http-messages
+  392  git switch main
+  393  git pull origin main
+  394  git branch javascript-ajax
+  395  git switch javascript-ajax
+  396  git status
+  397  git add javascript-ajax
+  398  git status
+  399  git commit -m "Completed javascript-ajax exercise." 
+  400  git push origin javascript-ajax
+  401  git switch main
+  402  git pull origin main
+  403  http https://boardgamegeek.com/xmlapi2/
+  404  http https://digimon-api.vercel.app/api/digimon
+  405  http https://digimon-api.vercel.app/api/digimon/level/rookie
+  406  http https://acnhapi.com/v1/
+  407  http  https://acnhapi.com/v1/villagers/'Octavian'
+  408  http  https://acnhapi.com/v1/villagers/'Cyrano'
+  409  http  https://acnhapi.com/v1/villagers/Cyrano
+  410  http https://api.artic.edu/api/v1/artworks
+  411  http https://api.artic.edu/api/v1/artworks/129884
+  412  http https://api.artic.edu/api/v1/artworks?fields=id,title,artist_display,date_display,main_reference_number
+  413  http https://collectionapi.metmuseum.org/public/collection/v1/objects
+  414  http https://zoo-animal-api.herokuapp.com/animals/rand
+  415  http https://zoo-animal-api.herokuapp.com/
+  416  http https://acnhapi.com/v1a/
+  417  http https://acnhapi.com/v1/villagers/1
+  418  http https://acnhapi.com/v1/villagers/'Theo'
+  419  http https://boardgamegeek.com/xmlapi2/
+  420  http https://boardgamegeek.com/xmlapi/search
+  421  http https://boardgamegeek.com/xmlapi2/3
+  422  https://boardgamegeek.com/xmlapi2/id=3
+  423  http https://boardgamegeek.com/xmlapi2/id=3
+  424  http https://boardgamegeek.com/xmlapi/game/2536
+  425  https://api.geekdo.com/xmlapi2/game/2536
+  426  http https://api.geekdo.com/xmlapi2/game/2536
+  427  http https://api.disneyapi.dev/characters
+  428  git https://digimoncard.io/api-public/getAllCards
+  429  git http https://digimoncard.io/api-public/getAllCards
+  430  http https://digimoncard.io/api-public/getAllCards
+  431  http https://developer.nps.gov/api/v1/parks?parkCode=acad&api_key=jHMeHBrOP5ANOPRGJtXj2W9DBMNFpB5Sx8tF8to1
+  432  http https://anapioficeandfire.com/api/characters/583
+  433  http https://developer.nps.gov/api/v1/parks
+  434  http https://developer.nps.gov/api/v1/parks?api_key=jHMeHBrOP5ANOPRGJtXj2W9DBMNFpB5Sx8tF8to1
+  435  http https://api.nasa.gov/planetary/apod?api_key=p5Y4lLDLTYGsRUqXW3uQj242loZZ1WX6v1qBuW7U
+  436  http https://api.tvmaze.com/shows/1
+  437  http https://collectionapi.metmuseum.org/public/collections/v1/objects/437133
+  438  http https://collectionapi.metmuseum.org/public/collections/v1/objects/"Wheat Field with Cypresses"
+  439  http https://developer.nps.gov/api/v1/activities/parks?api_key=jHMeHBrOP5ANOPRGJtXj2W9DBMNFpB5Sx8tF8to1
+  440  http http://acnhapi.com/v1/villagers/
+  441  http https://zoo-animal-api.herokuapp.com/animals
+  442  http https://zoo-animal-api.herokuapp.com/animals/rand
+  443  https://collectionapi.metmuseum.org/public/collection/v1/search
+  444  http https://collectionapi.metmuseum.org/public/collection/v1/search
+  445  http https://collectionapi.metmuseum.org/public/collection/v1/q==sunflowers
+  446  http https://collectionapi.metmuseum.org/public/collection/v1/q=="sunflowers"
+  447  http https://collectionapi.metmuseum.org/public/collection/v1/objects/437133
+  448  http http://acnhapi.com/v1/villagers/'Theo'
+  449  http http://acnhapi.com/v1/villagers/tig06
+  450  http http://acnhapi.com/v1/villagers/tig06
+  451  http http://acnhapi.com/v1/villagers/name="Bianca"
+  452  http http://acnhapi.com/v1/villagers/"Bianca"
+  453  http http://acnhapi.com/v1/villagers/Bianca
+  454  http http://acnhapi.com/v1/villagers/oct01
+  455  http http://acnhapi.com/v1/villagers/ant00
+  456  http http://acnhapi.com/v1/villagers/
+  457  http http://acnhapi.com/v1/villagers/
+  458  http http://acnhapi.com/v1/villagers/347
+  459  http https://acnhapi.com/v1/villagers/shp04/"Cashmere"
+  460  http https://acnhapi.com/v1/villagers/shp04/name/name-USen==Cashmere
+  461  http https://acnhapi.com/v1/villagers/shp04/name/name-USen=="Cashmere"
+  462  http https://acnhapi.com/v1/villagers/shp04/name
+  463  git pull origin main
+  464  git branch es6-const-let
+  465  git switch es6-const-let
+  466  git status
+  467  git add es6-const-let
+  468  git status
+  469  git commit -m "Completed es6-const-let exercise." 
+  470  git push origin es6-const-let
+  471  git switch main
+  472  git pull origin main
+  473  git branch es6-template-literals
+  474  git switch es6-template-literals
+  475  git status
+  476  git add es6-template-literals
+  477  git status
+  478  git push origin es6-template-literals
+  479  git commit -m "Completed es6-template-literals exercise."
+  480  git push origin es6-template-literals
+  481  git switch main
+  482  git pull origin main
+  483  git branch es6-destructuring
+  484  git switch es6-destructuring
+  485  git status
+  486  git add es6-destructuring
+  487  git commit -m "Completed es6-destructuring exercise."
+  488  git push origin es6-destructuring
+  489  git switch main
+  490  git branch es6-arrow-functions
+  491  git switch es6-arrow-functions
+  492  git status
+  493  git add es6-arrow-functions
+  494  git status
+  495  git commit -m "Completed es6-arrow-functions exercise."
+  496  git push origin es6-arrow-functions
+  497  git switch main
+  498  git pull origin main
+  499  git status
+  500  git pull origin main
+  501  git pull origin main
+  502  git branch command-line-basics
+  503  git switch command-line basics
+  504  git switch command-line-basics
+  505  cd command-line-basics
+  506  man man
+  507  man cat
+  508  cat laziness.txt
+  509  cat impatience.txt
+  510  cat hubris.txt
+  511  man cat
+  512  cat laziness.txt impatience.txt hubris.txt
+  513  cat laziness.txt impatience.txt hubris.txt > three-virtues.txt
+  514  cat three-virtues.txt
+  515  man ls
+  516  ls
+  517  ls -a
+  518  les -F
+  519  ls -F
+  520  man ls
+  521  ls lfz-staff/
+  522  ls -a lfz-staff/
+  523  ls -F lfz-staff/
+  524  ls -aF lfz-staff > lfz-staff/contents.txt
+  525  cat lfz-staff/contents.txt
+  526  man pwd
+  527  pwd
+  528  pwd > i-was-here.txt
+  529  ls
+  530  cat i-was-here.txt
+  531  man echo
+  532  echo 'Hello, World!'
+  533  ehco 'Hello, World!' > hello.txt
+  534* 
+!'
+  535  echo 'Hello, World!' > hello.txt
+  536  lis 
+  537  ls
+  538  cat hello.txt
+  539  man touch
+  540  touch tag-youre-it.txt
+  541  touch snoot/boop.txt
+  542  ls snoot/
+  543  man mkdir
+  544  mkdir parent
+  545  ls parent/
+  546  ls parent
+  547  ls parent/
+  548  man mkdir
+  549  mkdir -p parent/child/grandchild
+  550  touch parent/child/grandchild/.gitkeep
+  551  ls -a
+  552  ls -a parent/child/grandchild
+  553  man mv
+  554  man mv
+  555  mv pokiemans pokemon
+  556  man rm
+  557  rm lol.txt
+  558  ls
+  559  rm -r kill-me/
+  560  ls
+  561  man cp
+  562  cp and-then.txt no-and-then.txt
+  563  ls
+  564  cat and-then no-and-then
+  565  cat and-then.txt no-and-then.txt
+  566  man history
+  567  history
+  568  history > command-history.txt
