@@ -1,46 +1,40 @@
-.row {
-  display: flex;
+a {
+  text-decoration: none;
 }
 
-.column-full {
-  flex-basis: 100%;
+a:hover {
+  color: rgb(95 154 226);
 }
 
-.column-half {
-  flex-basis: 50%;
+h1 {
+  font-family: "Tiempos Headline", serif;
+  font-size: 2.05rem;
+  color: rgb(110 110 110);
+  font-weight: 100;
 }
 
-.column-three-quarter {
-  flex-basis: calc(300%/4);
+p {
+  font-family: Avenir, sans-serif;
+  color: rgb(124 124 124);
+  font-size: 1.1rem;
 }
 
-.column-one-quarter {
-  flex-basis: calc(100%/4);
+h2:first-child {
+  margin-top: 0;
 }
 
-.column-forty-five {
-  flex-basis: 45%;
-}
-
-.column-fifty-five {
-  flex-basis: 55%;
-}
-
-.page-container {
-  width: 1415px;
-  margin: 0 auto;
+header {
+  border-width: 0 0 0.1rem;
+  border-color: rgb(236 237 240);
+  border-style: solid;
 }
 
 .header-container > .row {
   align-items: center;
 }
 
-.header-container {
-  border-width: 0 0 0.1rem;
-  border-color: rgb(236 237 240);
-  border-style: solid;
-  margin: 0.4rem 0;
-  padding: 1rem 6rem;
+.header {
+  padding: 1rem;
 }
 
 .header-inside {
@@ -58,12 +52,7 @@
   color: rgb(160 160 160);
 }
 
-.nav-bar-product {
-  font-size: 1.04rem;
-  padding: 0.6rem 1.05rem;
-  margin: 0 0.8rem;
-  font-family: Avenir, sans-serif;
-  font-weight: 400;
+.selected {
   color: rgb(41 67 99);
 }
 
@@ -77,13 +66,14 @@
 }
 
 .image-container {
-  padding: 4.4rem 6rem 2.5rem;
+  padding: 4.2rem 0 2.5rem;
 }
 
 .image-dimension {
   background-image: url("images/hero.jpg");
   background-size: cover;
   background-position-y: center;
+  width: 100%;
   height: 600px;
   position: relative;
 }
@@ -126,22 +116,12 @@
   justify-content: flex-start;
 }
 
-h1 {
-  font-family: "Tiempos Headline", serif;
-  font-size: 2.05rem;
-  color: rgb(110 110 110);
-  font-weight: 100;
-}
-
-p {
-  font-family: Avenir, sans-serif;
-  color: rgb(124 124 124);
-  font-size: 1.1rem;
-}
-
-.clinician-container {
+.clinician-content {
   margin-top: 2rem;
   padding: 0 5rem 7.4rem;
+}
+
+.clinician-background {
   background-color: rgb(250 250 250);
   border-width: 0 0 0.1rem;
   border-color: rgb(236 237 240);
@@ -173,7 +153,6 @@ p {
 
 .learn-container {
   margin: 2rem 0 1.8rem;
-  padding: 0 6rem;
 }
 
 .learn-row {
@@ -194,14 +173,17 @@ p {
   border: 0 white solid;
 }
 
-.about-container {
+.about-background {
   background-color: rgb(82 83 81);
-  padding: 7.9rem 6rem 8.4rem;
-  margin: 0 auto;
+}
+
+.about-content {
+  padding: 7.5rem 0 7rem;
 }
 
 .canvas-logo {
   width: 155px;
+  padding: 0.5rem;
 }
 
 .address {
@@ -215,14 +197,11 @@ p {
   font-family: Avenir, sans-serif;
   font-size: 1.35rem;
   font-weight: 400;
+  display: block;
 }
 
 .footer-container {
-  margin: 3.8rem 6rem;
-}
-
-h2:first-child {
-  margin-top: 0;
+  margin: 3.8rem 0;
 }
 
 .footer-info {
@@ -232,34 +211,41 @@ h2:first-child {
   font-size: 1.2rem;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  color: rgb(95 154 226);
-}
-
 .product-image-container {
-  padding: 8rem 6rem 2.5rem;
+  padding: 4rem 0 3rem;
+  margin: 3rem auto 1rem;
 }
 
-.product-image {
-  background-image: url("images/product/product-header.jpg");
+.product-image,
+.implementation-image {
   background-size: cover;
   background-position-y: center;
   height: 580px;
   position: relative;
 }
 
-.product-image-heading {
+.product-image {
+  background-image: url("images/product/product-header.jpg");
+}
+
+.implementation-image {
+  background-image: url("images/implementation/implementation-header.jpg");
+}
+
+.image-heading-container {
   position: absolute;
   top: 11rem;
   left: 5rem;
 }
 
-.product-transparent-overaly {
-  background: rgb(81 81 81 / 33%);
+.implementation-heading {
+  position: absolute;
+  top: 8rem;
+  left: 5rem;
+}
+
+.other-pages-transparent-overaly {
+  background: rgb(55 55 55 / 33%);
   position: absolute;
   top: 0;
   right: 0;
@@ -267,28 +253,26 @@ a:hover {
   bottom: 0;
 }
 
-.command-container {
-  margin-top: 2rem;
-  padding: 0 6rem 4rem;
+.command-container,
+.automates-container {
   background-color: rgb(250 250 250);
 }
 
-.automates-container {
+.automates-container,
+.list-outline {
   border-width: 0 0 0.1rem;
   border-color: rgb(236 237 240);
   border-style: solid;
-  margin-top: 2rem;
-  padding: 0 6rem 4rem;
-  background-color: rgb(250 250 250);
 }
 
 .diagram-left {
   padding: 5rem 3rem 0 0;
   width: 100%;
+  margin-bottom: 4rem;
 }
 
 .diagram-right {
-  padding: 4rem 3rem 3rem;
+  padding: 5rem 3rem 0 0;
   width: 100%;
 }
 
@@ -299,38 +283,74 @@ a:hover {
 }
 
 .command-text-container {
-  padding: 6rem 0 0 5rem;
+  padding: 8rem 0 0 5rem;
   line-height: 1.9rem;
 }
 
-.command-head {
+.head {
   line-height: 2.5rem;
 }
 
-.command-paragraph {
+.center {
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.paragraph {
   line-height: 1.5rem;
 }
 
-.command-sub-head {
+.sub-head {
   font-family: Avenir, sans-serif;
   font-weight: 200;
   color: rgb(24 67 98);
 }
 
-.command-paragraph-quote {
-  font-style: italic;
+.paragraph-quote {
   font-family: "Tiempos Headline", serif;
-  font-size: 1.1rem;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
 .population-text-container {
-  padding: 4rem 6rem;
+  padding: 4rem 0;
   line-height: 1.9rem;
+  margin-bottom: 2rem;
 }
 
 .performance-text-container {
   padding-top: 3rem;
   padding-left: 5rem;
   line-height: 1.9rem;
+  margin-bottom: 5rem;
+}
+
+.list-container {
+  padding-left: 1.1rem;
+  padding-bottom: 5rem;
+  margin-bottom: 3rem;
+}
+
+.list {
+  line-height: 1.6rem;
+}
+
+.list-heading {
+  padding: 3.5rem;
+}
+
+.list-container > h1 {
+  margin-bottom: 0;
+  font-size: 2.5rem;
+}
+
+.list-container > p {
+  margin-top: 0;
+  margin-bottom: 3rem;
+}
+
+span.clinic-mini-head {
+  padding-left: 0.5rem;
 }
