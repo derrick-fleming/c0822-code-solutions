@@ -1,0 +1,38 @@
+h2 {
+  font-family: sans-serif;
+  font-weight: 200;
+}
+
+#root {
+  margin: 3rem;
+  text-align: center;
+}
+
+.toggle {
+  width: 60px;
+  border-radius: 15px;
+  display: inline-block;
+  margin-right: 2rem;
+}
+
+.off {
+  text-align: left;
+  background-color: #b8b8b8;
+}
+
+.on {
+  text-align: right;
+  background-color: #6aa74f;
+}
+
+.switch {
+  width: 25px;
+  height: 25px;
+  background-color: #ffff;
+  border-radius: 50%;
+  border: 2px solid;
+}
+
+.inline {
+  display: inline;
+}
