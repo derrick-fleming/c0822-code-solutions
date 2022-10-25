@@ -1,0 +1,41 @@
+#root {
+  margin: 2rem;
+  text-align: center;
+}
+
+button {
+  color: white;
+  background-color: #000;
+  font-size: 1.6rem;
+  line-height: 2;
+  padding: 0 1rem;
+  transition: all 0.4s ease-in;
+  box-shadow: 2px 2px 2px #000;
+}
+
+.three-clicks {
+  background-color: #351c74;
+}
+
+.six-clicks {
+  background-color: #674ea7;
+}
+
+.nine-clicks {
+  background-color: #e06666;
+}
+
+.twelve-clicks {
+  background-color: #f6b26a;
+  color: black;
+}
+
+.fifteen-clicks {
+  background-color: #ff0;
+  color: black;
+}
+
+.eighteen-clicks {
+  background-color: white;
+  color: black;
+}
