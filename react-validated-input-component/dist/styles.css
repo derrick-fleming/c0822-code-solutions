@@ -1,0 +1,47 @@
+body {
+  margin: 2rem;
+}
+
+form {
+  font-family: monospace;
+  font-weight: 500;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0.2rem;
+  font-weight: 700;
+  display: block;
+}
+
+.invalid,
+.fa-xmark {
+  color: #df4c3b;
+}
+
+.fa-check {
+  color: #6ba74f;
+}
+
+input {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  font-family: monospace;
+  border: 2px solid black;
+  border-radius: 6px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+}
+
+.fa-xmark,
+.fa-check {
+  font-size: 1.6rem;
+}
