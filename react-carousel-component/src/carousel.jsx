@@ -4,7 +4,8 @@ export default class Carousel extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      photoId: 1
+      photoId: 1,
+      clicked: false
     };
     this.switchPhoto = this.switchPhoto.bind(this);
     this.moveForwardBackward = this.moveForwardBackward.bind(this);
@@ -15,7 +16,7 @@ export default class Carousel extends React.Component {
     this.setState({
       photoId: Number(event.target.dataset.id)
     });
-    this.timerID = setInterval(() => {
+    /* this.timerID = setInterval(() => {
       if (this.state.photoId === this.props.images.length) {
         this.setState({
           photoId: 1
@@ -26,6 +27,7 @@ export default class Carousel extends React.Component {
         });
       }
     }, 3000);
+    */
   }
 
   moveForwardBackward(event) {
@@ -53,6 +55,7 @@ export default class Carousel extends React.Component {
         });
       }
     }
+    /*
     this.timerID = setInterval(() => {
       if (this.state.photoId === images.length) {
         this.setState({
@@ -64,6 +67,7 @@ export default class Carousel extends React.Component {
         });
       }
     }, 3000);
+    */
   }
 
   componentDidMount() {
@@ -79,6 +83,25 @@ export default class Carousel extends React.Component {
         });
       }
     }, 3000);
+  }
+
+  componentDidUpdate(prevState) {
+    clearInterval(this.timerID);
+    if (this.state.clicked !== prevState.clicked && prevState.clicked !== false) {
+      this.timerID = setInterval(() => {
+        if (this.state.photoId === this.props.images.length) {
+          this.setState({
+            photoId: 1,
+            clicked: false
+          });
+        } else {
+          this.setState({
+            photoId: this.state.photoId + 1,
+            clicked: false
+          });
+        }
+      }, 3000);
+    }
   }
 
   render() {
