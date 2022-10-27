@@ -24,14 +24,13 @@ button {
 }
 
 .fa-chevron-right {
-  padding-left: 2rem;
+  margin-left: 2rem;
 }
 
 .hidden {
   display: none;
 }
 
-button:hover,
 span:hover {
   cursor: pointer;
   color: black;
