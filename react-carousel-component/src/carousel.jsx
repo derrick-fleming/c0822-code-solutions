@@ -14,20 +14,9 @@ export default class Carousel extends React.Component {
   switchPhoto(event) {
     clearInterval(this.timerID);
     this.setState({
-      photoId: Number(event.target.dataset.id)
+      photoId: Number(event.target.dataset.id),
+      clicked: true
     });
-    /* this.timerID = setInterval(() => {
-      if (this.state.photoId === this.props.images.length) {
-        this.setState({
-          photoId: 1
-        });
-      } else {
-        this.setState({
-          photoId: this.state.photoId + 1
-        });
-      }
-    }, 3000);
-    */
   }
 
   moveForwardBackward(event) {
@@ -36,38 +25,29 @@ export default class Carousel extends React.Component {
     if (event.target.dataset.id === 'right') {
       if (this.state.photoId === images.length) {
         this.setState({
-          photoId: 1
+          photoId: 1,
+          clicked: true
         });
       } else {
         this.setState({
-          photoId: this.state.photoId + 1
+          photoId: this.state.photoId + 1,
+          clicked: true
         });
       }
     }
     if (event.target.dataset.id === 'left') {
       if (this.state.photoId === 1) {
         this.setState({
-          photoId: images.length
+          photoId: images.length,
+          clicked: true
         });
       } else {
         this.setState({
-          photoId: this.state.photoId - 1
+          photoId: this.state.photoId - 1,
+          clicked: true
         });
       }
     }
-    /*
-    this.timerID = setInterval(() => {
-      if (this.state.photoId === images.length) {
-        this.setState({
-          photoId: 1
-        });
-      } else {
-        this.setState({
-          photoId: this.state.photoId + 1
-        });
-      }
-    }, 3000);
-    */
   }
 
   componentDidMount() {
@@ -86,8 +66,7 @@ export default class Carousel extends React.Component {
   }
 
   componentDidUpdate(prevState) {
-    clearInterval(this.timerID);
-    if (this.state.clicked !== prevState.clicked && prevState.clicked !== false) {
+    if (this.state.clicked === true) {
       this.timerID = setInterval(() => {
         if (this.state.photoId === this.props.images.length) {
           this.setState({
@@ -135,12 +114,12 @@ export default class Carousel extends React.Component {
           </div>
         </div>
         <div className="row">
-          <ul onClick={this.switchPhoto}>
+          <ul>
             {
               images.map(image => {
                 image.item === this.state.photoId ? circleClass = 'solid' : circleClass = 'regular';
                 return (
-                  <li key={image.item} className="dot">
+                  <li onClick={this.switchPhoto} key={image.item} className="dot">
                     <span className={`fa-${circleClass} fa-circle`} data-id={image.item}></span>
                   </li>
                 );

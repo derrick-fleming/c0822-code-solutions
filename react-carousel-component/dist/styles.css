@@ -33,5 +33,6 @@ button {
 
 span:hover {
   cursor: pointer;
-  color: black;
+  color: rgb(181 80 80 / 91.7%);
+  fill: rgb(181 80 80 / 91.7%);
 }
