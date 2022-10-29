@@ -34,15 +34,5 @@ h1:hover {
 }
 
 .hidden {
-  overflow-y: hidden;
   display: none;
-  transform: translateY(-100%);
-  transition: all 0.5s ease-in;
-}
-
-.reveal {
-  overflow-y: auto;
-  display: relative;
-  transform: translateY(0);
-  transition: all 0.5s ease-in;
 }

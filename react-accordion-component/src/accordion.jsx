@@ -4,8 +4,7 @@ export default class Accordion extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      headerClick: '',
-      doubleClicked: false
+      openHeader: null
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -18,13 +17,9 @@ export default class Accordion extends React.Component {
         <ul>
           {
             accordionItems.map(item => {
-              if (this.state.headerClick !== item.title || this.state.doubleClicked === true) {
-                pClass = 'hidden';
-              } else {
-                pClass = 'reveal';
-              }
+              this.state.headerClick === item.title ? pClass = 'reveal' : pClass = 'hidden';
               return (
-                  <li onClick={this.handleClick} key={item.title}>
+                  <li key={item.title}>
                     <h1 id={item.title} onClick={this.handleClick}>{item.title}</h1>
                     <p className={pClass}>{item.details}</p>
                 </li>
@@ -39,12 +34,11 @@ export default class Accordion extends React.Component {
   handleClick(event) {
     if (this.state.headerClick === event.target.id) {
       this.setState({
-        doubleClicked: true
+        headerClick: null
       });
     } else {
       this.setState({
-        headerClick: event.target.id,
-        doubleClicked: false
+        headerClick: event.target.id
       });
     }
   }
