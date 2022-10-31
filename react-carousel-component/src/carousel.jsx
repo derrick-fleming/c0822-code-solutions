@@ -35,26 +35,22 @@ export default class Carousel extends React.Component {
     if (event.target.dataset.id === 'right') {
       if (this.state.photoId === images.length) {
         this.setState({
-          photoId: 1,
-          clicked: true
+          photoId: 1
         });
       } else {
         this.setState({
-          photoId: this.state.photoId + 1,
-          clicked: true
+          photoId: this.state.photoId + 1
         });
       }
     }
     if (event.target.dataset.id === 'left') {
       if (this.state.photoId === 1) {
         this.setState({
-          photoId: images.length,
-          clicked: true
+          photoId: images.length
         });
       } else {
         this.setState({
-          photoId: this.state.photoId - 1,
-          clicked: true
+          photoId: this.state.photoId - 1
         });
       }
     }
