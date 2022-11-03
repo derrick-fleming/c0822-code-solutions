@@ -1,0 +1,246 @@
+------------------
+SERVER SET UP AND PAGE RENDER
+------------------
+
+First, the express server needs to start. To begin this process:
+- The express server is initially booted up, in this case with the command: npm run dev
+- The express server executes the file and starts the webpack middleware
+   - Webpack middleware begins bundling the different JavaScript files into one output file.
+      - Webpack will go into webpack.config.js for its loaders, such as babel, to customize the output and be able to have more backwards compatibility
+- The server then registers a static middleware so that it knows how to dig around for different files.
+- The server then proceeds to learn how to serve the different files
+- Express then learns how to handle different requests and callbacks. In this app, it learns how to handle:
+     - post requests based on different string values ('sign-in and sign-up)
+- Express then learns how to handle errors with the "errorMiddleWare" callback.
+- Afterward, the server is ready to start and begins listening for different requests:
+      - 'express server listening on port 3000'
+
+When user enters the homepage address, the following code is executed:
+First, the webbrowser sends a GET request for "Awesome App" to the server hosting "Awesome App"
+The server serves the files needed for hosting "Awesome App"
+It serves the stylesheets like bootstrap.min.css and all.min.css stylesheets
+The network then serves main.js
+
+In index.jsx React queries the DOM for an element with an id 'root'
+Once it finds an element that matches that value, react creates a new root to render contents to it
+React then creates a react element 'App'
+We then move to the 'app.jsx' page because that is where the details of the 'App' can be found
+  - This page also imports packages and modules. One note: it imports "AppContext" which will create a way for react to pass down data through the component tree.
+React then renders the react element of type 'App' from the root container
+- The 'App' element has a this.state with several values including user, isAuthorizing, and route.
+  - User will keep track of who the user is, it is initially "null" because the user hasn't made an account yet
+  - IsAuthorizing is just a state that gives the page time after the page initially renders to authorize if the user has an account
+  - route keeps track of the page destinations
+- The 'App' element also has two event listeners: one to handleSignIns and the other to handleSignOuts
+- The app also has a 'renderPage' method that will run later on, but not yet.
+As react renders 'App', it first checks to see if the 'isAuthorizing' property is true.
+- If it is true, then the react element, 'App' returns null. This acts as a guard to stop the page from rendering further.
+Because the React element 'App' has finished rendering, the 'componentDidMount' method will begin
+This method first establishes a window event listener for any 'hashchange' that occurs.
+  - If a hash change does occur, the event listener will set the route property of 'this.state'
+The method also retrieves from the window's local storage the 'react-context-jwt' item and assigns it to the variable 'token'.
+    - This act is essentially looking for a webtoken to see if the user has been to this site before & has logged in. Because the user has no account, it will be 'null'
+  The method also checks to see if a token exists, if one does, it will decode the token and assign it to 'user'. If there is NO token, then it will return null.
+  Finally the method will set the state of the user property, with the value of user and the 'isAuthorizing' property with the value of 'false.'
+Now that set-stage has been changed, the App will issue a re-render
+  This time in the render method new variables based on 'this.state' and 'this' are combined together in 'contextValue'.
+  The render method now returns a new component tree.
+    - The first element of this return is the 'AppContext.Provider' which is essentially a component that will pass down values to its descendants.
+    - AppContext.Provider passes the 'contextValue' as its value, this will allow other components to access these values as "this.context"
+      - Inside the react Element there are additional elements that will be rendered. First is the Navbar:
+Navbar:
+Navbar is rendered from the navbar.jsx page (it has react (package) and AppContext (module) imported)
+Navbar is a React element that will render a navigation bar. This navigation bar has several React elements inside of it:
+- Ultimately, the react element will contain a div that has an anchor element with a property of '#'
+  - This # will be a way for a user to go to the main page is the user is not null.
+    - The anchor element has an icon of a thunder bolt and the text: Awesome App
+  - Another div in the react element will be created based on a few conditions:
+    - The first condition checks to see if the 'user' is not 'null'. If it isn't then, it will display a button that says: 'signOut'
+      - That button has an event handler that will handle a SignOut event.
+    - Because the user is NOT signed in & does NOT have an account, this div will NOT show
+  - The div that WILL render initially is the one where user is 'null'
+    - This will create two react elements that say: Sign In & Sign Up.
+    - These elements both have href properties that will determine what page the user will go to when they're clicked.
+  - After the Navbar is rendered, react moves to the next element: PageContainer
+PageContainer
+Page container is rendered with one child: which is: this.renderPage()
+First though - some notes about page-container. It is just a react component that has a style
+- The PageContainer's child is rendered from the renderPage method in 'App'
+  - This rendering will return different react Elements based on specific conditions.
+    - If the path route is '' -- Then the react Element, type "Home" will be returned. In this case, 'Home' will happen because the path is ''
+  - HOME is a react component from 'home.jsx'. This component has a contextType from 'AppContext', just like Navbar
+      - Home will render two possible options. The first option is if there is no 'user' information, then the render method will return the 'Redirect' component.
+      - If there IS a user, then it will return a react element with the type div and the iframe from 'giphy.com'
+    - In this case, because there is NO user, the react element 'Redirect' will be returned WITH the 'to' prop of 'sign-in'
+- Redirect is a react element that will first create a new URL object that will be based on the window's location.
+  - It will check if props.to equals ''. If it does, the url.hash will become '#' and if not, it will become 'props.to'
+  - In our case, the url.hash becomes 'sign-in'
+- The window.location is then replaced with the newly created url and the redirect element will return null.
+- React is done rendering its component tree.
+- But! Because the hash changed, the event listener from app.jsx is fired again!
+- The event listener changes the set-state of the route. Which means...
+- The page is rerendered!
+  - It rerenders the navigation bar and the page container.
+  - THIS time though in PageContainer's child that uses the 'this.renderPage() method, something different will happen.
+  - Because the path is no longer '' but now 'sign-in' the page will render the react component Auth.
+AUTH -
+  - Just like other component, Auth imports packages and modules from different sources. It also imports AppContext because it will be needed.
+  - When Auth renders, it first checks to see if there is a user (if there is, it will return Redirect with a value of '')
+  - Because there is NO user, Auth will instead first create a welcomeMessage for the user based on the provided path.
+      - It checks if the path says 'sign-in' which will create a 'Please sign in...' message.
+      - If the path is NOT 'sign-in' the message will be 'Create an Account...'
+      In this case, the message will be 'Please sign in' because of the route.path's value is 'sign-in'
+  - Auth then returns a react element: div that contains a header with the app's title and a welcome message.
+    - Below the welcome message, the div will have another reactElement of type 'AuthForm'. This form has a key, an action (based on the path of our #) and an eventlistner from AppContext - onSignIn.
+AuthForm
+- AuthForm is another react component with two states: the username and the password. It also contains two event handlers:
+- handleChange -- This addresses when the user inputs username/password and the values are inserted into this.state
+- handleSubmit - This addresses when the user submits the form.
+- AuthForm renders a form based on a few conditions depending on if the user is 'signing up' or 'signing in'. These conditions will change how some of the text is displayed
+- The form is a react Element that has the handleSubmit event handler and a label for the 'username'
+- There is an input for the userName information with the event handler: handleChange
+- There is also a label for 'password', an input for password, and another event handler.
+- Underneath, there will be the text: 'Register now' and a link to the 'sign-up' because we are on the 'sign-in' screen
+- The button in the form says 'Log In' because we are on the 'sign-in' sreen.
+Now that AuthForm has rendered, the page has been rendered.
+- React then compares the new rendered components with the previous components. It will then replace only the new components.
+This means that the navbar did not change, but the main page will now display the AuthForm.
+The user is now ready to begin signing up for an account. React just waits now for changes.
+
+------------------
+USER CAN SIGN UP
+------------------
+
+When the user is on the 'sign-in' screen, the user will first click on the 'register now' link at the bottom of the form.
+This will change the # of the window to 'sign-up' and the window event listener will change the route's state.
+React will then re-render the page.
+As it re-renders the page, the Navbar will not change, as none of its properties were adjusted with the shift to 'sign-in'.
+When the page is rendering the PageContainer element, the renderPage method will render the Auth element because the path is 'sign-in'
+This time, when the page is being rendered, the text and buttons will adjust to the conditions of 'sign-up'.
+This means, that the welcome message will now be 'create an account to get started'.
+The link at the bottom of the form that once said 'register now' will now state: 'sign in instead' and the button will read 'register.'
+The page will then finish its rendering and compare the old render with this new render and only replace the changed elements (in this case, things like 'Register')
+
+When the user begins inputing their information, either the 'username' or the 'password' the 'onChange' event 'handleChange' is fired.
+As previously mentioned, this event will update the this.state values of the form. If the user is inputting information in the 'username' section, then this.state.username is updated.
+With each value the user inputs, the page will re-render and update the values of the form. It will only update the parts on the page that has changed.
+Once the user has finished with their form, they can then click on "Register."
+This will start the 'handleSubmit' event handler.
+In the 'handleSubmit' event, the form will first prevent its default behavior of reloading the page.
+Instead, a request is being prepared to send the values to the server to be processed and stored in the database.
+The form will then fetch a 'POST' request to '/api/auth/sign-up' to register the user.
+The form will then await for a response. Here's what happens on the server side as the form awaits the response:
+
+Server Side!
+- The express server works from top-to-bottom to process what request it received.
+- The post request matches the '/api/auth/sign-up, which means express will process that request!
+  - First it checks if there was a new username or password provided. If NOT that request is thrown (yeet) and an error message is sent to the client.
+  - Because a password/username was provided, argon2 then hashes the password for extra security
+  - The hashed-password and username are then sent the database and stored there.
+  - The result of the db query is then sent back to the client with a response status (201)
+- If there was any error along the way, it is caught and sent down to the errorMiddleWare.
+
+Now that the response has been sent back....it then parses the response.
+The AuthForm will then check if the user action was to 'sign-up' or 'sign-in'.
+Because we are registering for the first time, the window.location.hash will now change to 'sign-in'.
+This means....an event handle happens! The window hash has changed and this.state.route changed! It's time to viewswap.
+The page will re-render again. This time it will re-render based on a new route: '#sign-in'
+
+React will re-render in a similar fashion as before. But! This time, when react is rendering the Auth element, there will be different text.
+NOW! Auth will display text that represents that the user needs to sign in. For example, the button will now display "sign in" instead of "register."
+Just like before, the only element that has changed were specific features in the Auth element, which means that only those features, like the 'welcome message' will be changed.
+
+This is the user's sign that they have officially registered and they can NOW sign into their account.
+
+------------------
+USER CAN SIGN IN
+------------------
+
+The user's current screen should be displaying a Navbar and the sign-in page information.
+Just like before, as the user begins to type in their sign-in credentials, the AuthForm event handlers will be firing updating the values of: this.state.username or this.state.password.
+This will re-render the page and react will be replacing only the elements that have been changing (like the input that's typed)
+Once the user has inserted their sign-in credentials, they will now click on the 'Submit' button.
+When 'submit' is clicked, the 'handleSubmit' event is fired. This event will initially prevent the default behavior of forms & not refresh the page.
+The 'submit' event will then prepare to send a request to the server again (this means things like getting the method read, and setting headers, and JSON stringify'ing 'this.state'). This time though, the action will be 'sign-in' instead of 'sign-up'
+
+On the Server Side...
+Again, the express server works from top to bottom to figure out what request it has just received.
+It finds a match with '/api/auth/sign-in' and begins the process first by checking if a username/password were provided.
+If they are are not provided, the server will create a new ClientError with an 'invalid login' message and throw it to the express ErrorMiddleWare
+If the user DID provide the information, then we prepare to query the database looking for the userId and hashedPassword
+When we receive our results from the database, we then create an array from the first result of result.rows
+If there was NO user, we create a new client Error and throw it to the Express ErrorMiddleWare.
+   - How did we get this far if there was not a valid user? Because we don't know until we query the DB if the user was valid or not!
+If the user was correct, we then need to verify the password using argon2 and to see if the hashedPassword from the DB and the password the user provided match!
+   if they don't match...we create a new ClientError and throw the error because the user might be an imposter! Express ErrorMiddleWare handles the error.
+Assuming we made it this far...we then create a new payload that will be assigned to the user and issue a new token
+ - This token will allow us to keep a client logged into their account as long as they don't log out.
+The server then sends a json response back to the client containing the token and user payload.
+If any of the steps above failed, express is ready to catch the error and send it to the ErrorMiddleWare!
+
+Back on the client-side...
+The client parses the response it receives from the server
+It will then check to see if our action was 'sign-up', which it wasn't. SO, we move to the next condition
+We then check to see if result.user and the result.token are both present in the response. If they are...
+ - We then will handle the onSignIn event. As seen in auth.jsx, onSignIn  was from the app.jsx. How can we do that? Because Auth is in the context of the app.jsx, so, the event handler from there is passed down.
+This handleSignIn event essentially takes the user's token and will store it in the window's localStorage under the 'react-context-jwt' property.
+It also changes the state of 'user' to be the value from the user log-in.
+Because we changed the state of the user...we spark a re-render of the page!
+
+As the page is re-rendering, the Navbar is the first to change this time.
+Inside the Navbar element, there is the condition that checked if user was not strictly equal to null.
+Because this.state.user is no longer null, the nav bar will now display a react button that says 'Sign Out.'
+Progressing through the PageContainer element, the child that is initially rendered is Auth.
+BUT! In Auth there is a guard clause that checks if a user exists. If a user DOES exist (which one now does!) then we are redirected to the 'Redirect' element with a to value: ''
+This means that in the Redirect element, our url.hash will change to # and replaces the window.
+As a result, the rendering if finished....React replaces the some of the Navbar elements because they updated and the page updated, too (it's displaying null)
+BUT! there has been a hash change. Which means...we re-render the page once more with the new hash, which is now: ''
+This time when we are rendering the PageContainer element, we check to see if any path is strictly equal to '', which now there is!
+So, we return the react element Home!
+Home is a react element that first checks if there is a user (if not, it's redirected to sign-in). Because a user was passed through this.context
+The user is Rick rolled.
+
+React then finished rendering the page, checks what has changed and updates appropriately (home has been added now)
+
+-----------------
+USER CAN STAY SIGNED IN (EVEN WHEN PAGE IS REFRESHED)
+-----------------
+
+When the user leaves the browser, or refreshes the page a couple things happen.
+First, the App element is destroyed, including the navbar and home element when the user leaves or refreshes
+But, when they return or the refresh is finished, the server gets its requests and react activates.
+The files are served once more from the express server.
+React creates App's initial values.
+This.state's initial values are the same as the user's first time going to the page (i.e. user:null).
+It renders initially the same as before, where it will initially return null upon its initial render.
+However, this time when the component mounts, there will be different values.
+When the component mounts there WILL be a token in the localstorage. As a result, the user variable will not be null.
+Instead, the user will be the decoded token.
+Since the setStates changed, including 'isAuthorizing', React will re-render the page oncemore.
+This time though, when React renders the page it will not return null. Instead, it will render: the NavBar with the 'logged' in feature, since there IS a user it can access from AppContext.
+When react is processing the PageContainer child, it will go to the Home component and render its elements because the route is " '' "
+Since the user does exist on the AppContext, a react div element will be returned and the user will oncemore be Rick rolled.
+
+-----------------
+User can sign out
+-----------------
+Once the user is done with the page, they have the option to sign out.
+Let's not forget that 'Navbar' has an event listener on the button with 'Sign Out'. This event listener is waiting for someone to click it.
+When the user clicks on 'Sign Out' the 'handleSignOut' event is fired.
+This event can be accessed because it was passed as context from AppContext.
+In this event, the localStorage removes the saved token found in 'react-context-jwt'.
+It then changes the state of the user to be 'null'.
+Now the user will not be able to reaccess the token until they have to sign back into the app.
+As a result, the page re-renders because of the setState change.
+When the page re-renders, The Navbar elements that change this time will be the removal of "sign out"
+Instead, "sign in" and "sign up" will be displayed because the user is now "null".
+In the PageContainer element's child, the user will initially be sent to the Home element because the path is still ''
+But! There a user does not exist on the AppContext. As a result, the react element Redirect will be rendered with the prop: to='sign-in'.
+The reactRedirect element will change the url to 'sign-in', which will cause a hash change on the window.
+The page will then finish its re-render and update the navbar.
+Because the hash changed...there will be another setState change of the route and the page will re-render
+The navbar will not update because its the same.
+The pageContainer's children will change though. This time the path will shift to render the react element Auth because the path is now 'sign-in'
+Auth will be rendered, which will create the authorization form with the values for 'sign-in', such as the button 'log in'
+Once Auth finishes rendering, the page has finished its render.
+React then compares to see which elements changed and will update those that changed (like Auth).
