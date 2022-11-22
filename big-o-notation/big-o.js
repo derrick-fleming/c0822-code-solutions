@@ -9,9 +9,9 @@ function uniqueLinear(words) {
     i++                             // 2 * n = O(2n)
   ) {
     const word = words[i];          // 2 * n = O(n)
-    if (!seen[word]) {              // 1 * n = O(n)
-      seen[word] = true;            // 1 * n = O(n)
-      unique[unique.length] = word; // 1 * n = O(n)
+    if (!seen[word]) {              // 3 * n = O(n)
+      seen[word] = true;            // 2 * n = O(n)
+      unique[unique.length] = word; // 3 * n = O(n)
     }
   }
   return unique;                    // 1 * 1 = O(1)
