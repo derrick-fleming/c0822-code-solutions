@@ -2,7 +2,7 @@ import React from 'react';
 import jwtDecode from 'jwt-decode';
 import AppContext from './lib/app-context';
 import parseRoute from './lib/parse-route';
-import Auth from './pages/auth';
+import AuthPage from './pages/auth-hook';
 import Home from './pages/home';
 import NotFound from './pages/not-found';
 import Navbar from './components/navbar';
@@ -48,7 +48,7 @@ export default class App extends React.Component {
       return <Home />;
     }
     if (path === 'sign-in' || path === 'sign-up') {
-      return <Auth />;
+      return <AuthPage />;
     }
     return <NotFound />;
   }
