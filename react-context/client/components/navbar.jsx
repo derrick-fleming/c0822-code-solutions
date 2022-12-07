@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import AppContext from '../lib/app-context';
 
-export default class Navbar extends React.Component {
-  render() {
-    const { user, handleSignOut } = this.context;
-    return (
+export default function Navbar() {
+  const { user, handleSignOut } = useContext(AppContext);
+  return (
       <nav className="navbar navbar-dark bg-dark">
         <div className="container">
           <a className="navbar-brand" href="#">
@@ -31,8 +30,5 @@ export default class Navbar extends React.Component {
           </div>
         </div>
       </nav>
-    );
-  }
+  );
 }
-
-Navbar.contextType = AppContext;

@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './app';
+import AppHook from './app-hook';
 
 const container = document.querySelector('#root');
 const root = ReactDOM.createRoot(container);
 
-root.render(<App />);
+root.render(<AppHook />);

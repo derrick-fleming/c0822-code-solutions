@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Redirect from '../components/redirect';
 import AppContext from '../lib/app-context';
 
@@ -14,12 +14,12 @@ const styles = {
   }
 };
 
-export default class Home extends React.Component {
-  render() {
+export default function Home() {
+  const { user } = useContext(AppContext);
 
-    if (!this.context.user) return <Redirect to="sign-in" />;
+  if (!user) return <Redirect to="sign-in" />;
 
-    return (
+  return (
       <div style={styles.gifContainer}>
         <iframe
           src="https://giphy.com/embed/Ju7l5y9osyymQ"
@@ -28,8 +28,5 @@ export default class Home extends React.Component {
           frameBorder="0"
           style={styles.gif} />
       </div>
-    );
-  }
+  );
 }
-
-Home.contextType = AppContext;
