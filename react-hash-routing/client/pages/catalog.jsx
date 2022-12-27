@@ -56,7 +56,7 @@ function Product(props) {
   /* this anchor should go to product details at `#products?productId=${productId}` */
   return (
     <Link
-      to= {`/products?productId=${productId}`}
+      to= {`/products/${productId}`}
       style={styles.product}
       className="text-dark card mb-4 shadow-sm text-decoration-none">
       <img src={imageUrl} className="card-img-top" alt={name} style={styles.image}/>
