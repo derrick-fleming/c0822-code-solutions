@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { toDollars } from '../lib';
+import { Link, useParams } from 'react-router-dom';
 
 const styles = {
   image: {
@@ -12,35 +13,36 @@ const styles = {
   }
 };
 
-export default class ProductDetails extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      product: null
-    };
-  }
+export default function ProductDetails() {
+  const [product, setProduct] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const { productId } = useParams();
 
-  componentDidMount() {
-    fetch(`/api/products/${this.props.productId}`)
-      .then(res => res.json())
-      .then(product => this.setState({ product }));
-  }
+  useEffect(() => {
+    if (isLoading) {
+      fetch(`/api/products/${productId}`)
+        .then(res => res.json())
+        .then(product => {
+          setProduct(product);
+          setIsLoading(false);
+        });
+    }
+  });
 
-  render() {
-    if (!this.state.product) return null;
-    const {
-      name, imageUrl, price, shortDescription, longDescription
-    } = this.state.product;
-    return (
+  if (!product) return null;
+  const {
+    name, imageUrl, price, shortDescription, longDescription
+  } = product;
+
+  return (
       <div className="container">
         <div className="card shadow-sm">
           <div className="card-body">
             <div className="row">
               <div className="col">
-                {/* this anchor should go back to the catalog at '#' */}
-                <a href="#" className="btn text-secondary">
+                <Link to="/" className="btn text-secondary">
                   &lt; Back to catalog
-                </a>
+                </Link>
               </div>
             </div>
             <div className="row mb-4">
@@ -63,6 +65,5 @@ export default class ProductDetails extends React.Component {
           </div>
         </div>
       </div>
-    );
-  }
+  );
 }

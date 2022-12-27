@@ -1,5 +1,6 @@
 import React from 'react';
 import { toDollars } from '../lib';
+import { Link } from 'react-router-dom';
 
 const styles = {
   product: {
@@ -54,8 +55,8 @@ function Product(props) {
   const { productId, name, price, imageUrl, shortDescription } = props.product;
   /* this anchor should go to product details at `#products?productId=${productId}` */
   return (
-    <a
-      href= {`#products?productId=${productId}`}
+    <Link
+      to= {`/products/${productId}`}
       style={styles.product}
       className="text-dark card mb-4 shadow-sm text-decoration-none">
       <img src={imageUrl} className="card-img-top" alt={name} style={styles.image}/>
@@ -64,6 +65,6 @@ function Product(props) {
         <p className="card-text text-secondary">{ toDollars(price) }</p>
         <p className="card-text" style={styles.description}>{ shortDescription }</p>
       </div>
-    </a>
+    </Link>
   );
 }
