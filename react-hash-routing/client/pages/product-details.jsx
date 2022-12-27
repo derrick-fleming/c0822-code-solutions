@@ -1,5 +1,6 @@
 import React from 'react';
 import { toDollars } from '../lib';
+import { Link } from 'react-router-dom';
 
 const styles = {
   image: {
@@ -38,9 +39,9 @@ export default class ProductDetails extends React.Component {
             <div className="row">
               <div className="col">
                 {/* this anchor should go back to the catalog at '#' */}
-                <a href="/" className="btn text-secondary">
+                <Link to="/" className="btn text-secondary">
                   &lt; Back to catalog
-                </a>
+                </Link>
               </div>
             </div>
             <div className="row mb-4">

@@ -19,7 +19,7 @@ export default class App extends React.Component {
       <>
         <Header />
         <Routes>
-          <Route path='/' element={<Catalog />} />
+          <Route exact path='/' element={<Catalog />} />
           <Route path='/products' element={<ProductDetails productId={this.state.route.params.get('productId')} />} />
         </Routes>
       </>

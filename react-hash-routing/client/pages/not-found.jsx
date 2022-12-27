@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const styles = {
   pageContent: {
@@ -19,7 +20,7 @@ export default function NotFound(props) {
           </h3>
           <p className="text-muted">
             {/* this anchor should go back to the catalog at '#' */}
-            <a href="/">Return to the catalog</a>
+            <Link href="/">Return to the catalog</Link>
           </p>
         </div>
       </div>

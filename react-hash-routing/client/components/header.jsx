@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Header(props) {
   return (
@@ -7,9 +8,9 @@ export default function Header(props) {
         <div className="container">
           <div className="col px-0">
             {/* this anchor should go back to the catalog at '#' */}
-            <a href="/" className="navbar-brand">
+            <Link to="/" className="navbar-brand">
               <i className="fa fa-dollar-sign" /> Wicked Sales
-            </a>
+            </Link>
           </div>
         </div>
       </nav>
