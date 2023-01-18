@@ -1,13 +1,24 @@
-fetch('https://jsonplaceholder.typicode.com/users')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(err => {
-    console.error(err);
-  });
+async function placeHolder(url) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
 
-fetch('https://pokeapi.co/api/v2/pokemon/151')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(err => {
+  } catch (err) {
     console.error(err);
-  });
+  }
+}
+
+placeHolder('https://jsonplaceholder.typicode.com/users');
+
+async function pokeFetch(url) {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+pokeFetch('https://pokeapi.co/api/v2/pokemon/151');
